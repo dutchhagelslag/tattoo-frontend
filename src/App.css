@@ -9,12 +9,8 @@
 
 }
 
-.quote {
-  font-style: italic;
-}
-
-.quote-author {
-  opacity: .8;
+.subtitle {
+  color: red;
 }
 
 .content {
@@ -32,9 +28,11 @@
   background-color: #E2E8F0;
   padding-right: 25px;
   padding-left: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -45,7 +43,7 @@
   padding-left: 15px;
   border: 1px solid #94A3B8;
   background-color: #E2E8F0;
-  border-radius: 5px;
+  border-radius: 10px;                                                                                                                                                                         opacity: 0.6;                                                                                                                                                                                transition: 0.2s;  
   cursor: pointer;
 }
 

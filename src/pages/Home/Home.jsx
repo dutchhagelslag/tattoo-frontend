@@ -10,10 +10,9 @@ export default function Home(){
 
   return (
     <div className="content">
-      <h1>🤗 SWE React Demo </h1>
+      <h1> Ta2h3nna Homepage </h1>
       <div>
-        <p className="quote">"A list is only as strong as its weakest link"</p>
-        <p className="quote-author">- Donald Knuth</p>
+        <p className="subtitle">"We'll help you choose your next tattoo"</p>
       </div>
       <button
         onClick={() => navigateToPage('/rooms')}
