@@ -18,13 +18,13 @@ export default function Home(){
         onClick={() => navigateToPage('/rooms')}
         className="page-button"
       >
-        View All Rooms
+        Rooms
       </button>
       <button
         onClick={() => navigateToPage('/users')}
         className="page-button"
       >
-        View All Users
+        Tattoo Gallery
       </button> 
     </div>
   );

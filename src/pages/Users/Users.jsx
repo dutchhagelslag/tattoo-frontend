@@ -2,96 +2,46 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
 
+
+
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+import LightGallery from 'lightgallery/react';
+
 import './users.css';
 
-export default function Users() {
-  const [users, setUsers] = useState(undefined);
-  const [error, setError] = useState(undefined);
+export default function Gallery() {
+    const onInit = () => {
+        console.log('lightGallery has been initialized');
+    };
+    return (
 
-  const [refresh, setRefresh] = useState(0);
+        <div className="App">
+            <LightGallery
+                onInit={onInit}
+	        mode="lg-fade"
+                plugins={[lgThumbnail, lgZoom]}
+            >
+                <a data-lg-size="1406-1390" 
+		   href="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg">
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newUserName, setNewUserName] = useState('');
+                  <img alt="img1" src="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg" />
+                </a>
 
-  const history = useHistory();
+                <a data-lg-size="1406-1390" 
+	    	   href="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a">
 
-  useEffect(() => {
-    axios.get('https://demo-repo23.herokuapp.com/users/list')
-      .then((response) => {
-        if (response.data){
-          setUsers(response.data);
-        }
-      })
-      .catch(error => {
-        setError(error);
-        console.log(error);
-      });
-  }, [refresh])
+                    <img alt="img2" src="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a" />
+                </a>
 
-  const handleCreateUser = () => {
-    axios.post(`https://demo-repo23.herokuapp.com/users/create/${newUserName}`)
-      .then(() => {
-        setIsModalOpen(false);
-        setRefresh(refresh + 1);
-      })
-      .catch(error => {
-        setError(error);
-        console.log(error);
-      })
-  }
-
-  return (
-    <div className="content">
-      {isModalOpen && 
-        <div className="create-modal">
-          <input
-            className="user-input"
-            placeholder="User Name"
-            value={newUserName}
-            onChange={(e) => setNewUserName(e.target.value)}
-          />
-          <div className="create-actions">
-            <button className="button" onClick={handleCreateUser}>Create New User</button>
-            <button className="button" onClick={() => setIsModalOpen(false)}> Cancel </button>
-          </div>
+		<a href="https://preview.redd.it/msm091nhzci01.jpg?width=960&crop=smart&auto=webp&s=5dbcc05c38864f8fdc045a5f90f7bb127160e884">
+                    <img alt="img1" src="https://preview.redd.it/msm091nhzci01.jpg?width=960&crop=smart&auto=webp&s=5dbcc05c38864f8fdc045a5f90f7bb127160e884" />
+                </a>
+            </LightGallery>
         </div>
-      }
-  
-      <div className="rooms-header">
-        <h1>Users</h1>
-        <button
-          onClick={() => history.push('/')}
-          className="button"
-        >
-          {"<--"}Return Home
-        </button>
-      </div>
-
-      {error && (
-        <div className="rooms-error-box">
-          <p>{error.toString()}</p>
-        </div>
-      )}
-
-      <div className="rooms-list">
-        {users ? users.map((user, index) => (
-          <div 
-            className="user-item"
-            key={`${user.userName}-${index}`}
-          >
-            <p>{user.userName}</p>
-            <p>{index}</p>
-          </div>
-        )) : (
-          <div className="rooms-empty">
-            <p>Sorry there are no rooms right now... Come back later </p>
-          </div>
-        )}
-      </div>
-
-      <div>
-        <button className="page-button" onClick={() => setIsModalOpen(true)}> Add New User </button>
-      </div>
-    </div>
-  )
+    );
 }
