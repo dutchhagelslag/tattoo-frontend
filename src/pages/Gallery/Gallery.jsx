@@ -18,6 +18,7 @@ export default function Gallery() {
     const onInit = () => {
         console.log('lightGallery has been initialized');
     };
+
     return (
 
         <div className="App">
@@ -26,11 +27,18 @@ export default function Gallery() {
 	        mode="lg-fade"
                 plugins={[lgThumbnail, lgZoom]}
             >
-                <a data-lg-size="1406-1390" 
-		   href="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg">
-
-                  <img alt="img1" src="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg" />
-                </a>
+                    <a
+                        data-lg-size="1400-1400"
+                        className="gallery-item"
+                        data-src="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg"
+                        data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@asoshiation' >Good</a></h4><p> 
+					   Artist - Lucki</p>"
+                    >
+                        <img
+                            className="img-responsive"
+                            src="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg"
+                        />
+                    </a>
 
                 <a data-lg-size="1406-1390" 
 	    	   href="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a">
