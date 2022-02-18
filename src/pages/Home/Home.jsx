@@ -21,7 +21,7 @@ export default function Home(){
         Rooms
       </button>
       <button
-        onClick={() => navigateToPage('/users')}
+        onClick={() => navigateToPage('/gallery')}
         className="page-button"
       >
         Tattoo Gallery

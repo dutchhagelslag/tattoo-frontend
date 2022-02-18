@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import {useHistory} from 'react-router-dom';
+//import React, {useEffect, useState} from 'react';
+//import axios from 'axios';
+//import {useHistory} from 'react-router-dom';
 
 
 
@@ -12,7 +12,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import LightGallery from 'lightgallery/react';
 
-import './users.css';
+import './gallery.css';
 
 export default function Gallery() {
     const onInit = () => {
