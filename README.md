@@ -4,6 +4,7 @@
 - Internet connection for fonts (optional)
 - `npm` 
 - `node`: version 16.0 or higher
+- `lightgallery`: to install run `npm install lightgallery`
 
 ## To run: 
 `npm run start`
