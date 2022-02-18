@@ -11,14 +11,14 @@ import './App.css';
 function App() {
   return (
 	<>
-	<div style={{ display: 'block', width: 700, padding: 30 }}>
-	        <h4>React-Bootstrap NavBar Component</h4>
+	<div style={{ display: 'block', width: 7000, padding: 30 }}>
+	        
 
-	<Navbar fixed="top" bg="light" variant="light">
+	<Navbar fixed="top" bg="dark" variant="light">
 	      <Container>
-	      <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+	      <Navbar.Brand href="/">Ta2H3nna</Navbar.Brand>
 	      <Nav className="me-auto">
-	        <Nav.Link href="#home">Home</Nav.Link>
+	        <Nav.Link href="/rooms">Rooms</Nav.Link>
 	      </Nav>
 	      </Container>
 	 </Navbar>		
