@@ -1,21 +1,6 @@
-import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {useHistory} from 'react-router-dom';
-
-import RoomItem from '../../components/RoomItem/RoomItem';
-
-import './rooms.css';
 
 export default function Rooms() {
-  const [rooms, setRooms] = useState(undefined);
-  const [error, setError] = useState(undefined);
-
-  const [refresh, setRefresh] = useState(undefined);
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newRoomName, setNewRoomName] = useState('');
-
-  const history = useHistory();
 
 
   const test_get = () => {
@@ -26,7 +11,6 @@ export default function Rooms() {
       .catch(error => {
         console.log("API call failed");
       });
-
   };
   return (
     <div className="content">
