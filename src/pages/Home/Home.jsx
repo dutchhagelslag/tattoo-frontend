@@ -27,6 +27,8 @@ export default function Home(){
         Tattoo Gallery
       </button> 
     </div>
+
+
   );
 };
 
