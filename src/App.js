@@ -19,7 +19,6 @@ function App() {
 	      <Navbar.Brand href="/">Ta2H3nna</Navbar.Brand>
 	      <Nav className="me-auto">
 	        <Nav.Link href="/rooms">Rooms</Nav.Link>
-	  	<Nav.Link href="/gallery">Tattoo Gallery</Nav.Link>
 	      </Nav>
 	      </Container>
 	 </Navbar>		
