@@ -2,7 +2,6 @@ import axios from 'axios';
 
 export default function Rooms() {
 
-
   const test_get = () => {
     axios.get('https://ta2h3nna.herokuapp.com/all_designs')
       .then(response => {
