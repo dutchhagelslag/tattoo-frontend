@@ -5,7 +5,8 @@
 - `npm` 
 - `node`: version 16.0 or higher
 - `lightgallery`: to install run `npm install lightgallery`
-- `react-bootstrap` : to install I ran `npm install react-bootstrap`
+- `react-bootstrap` : to install I ran `npm install react-bootstrap
+- `boostrap`: to install I ran `npm install bootstrap`
 ## To run: 
 `npm run start`
 
