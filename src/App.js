@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Navbar, Nav, Container} from 'react-bootstrap'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
@@ -14,7 +15,7 @@ function App() {
 	<div style={{ display: 'block', width: 7000, padding: 30 }}>
 	        
 
-	<Navbar fixed="top" bg="dark" variant="light">
+	<Navbar fixed="top" bg="light" variant="light">
 	      <Container>
 	      <Navbar.Brand href="/">Ta2H3nna</Navbar.Brand>
 	      <Nav className="me-auto">
