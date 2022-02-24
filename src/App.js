@@ -12,14 +12,14 @@ import './App.css';
 function App() {
   return (
 	<>
-	<div style={{ display: 'block', width: 7000, padding: 30 }}>
-	        
+	<div className="Navbar">
 
 	<Navbar fixed="top" bg="light" variant="light">
 	      <Container>
-	      <Navbar.Brand href="/">Ta2H3nna</Navbar.Brand>
+	      <Navbar.Brand className="Navbar-title" href="/">Ta2H3nna</Navbar.Brand>
 	      <Nav className="me-auto">
-	        <Nav.Link href="/rooms">Rooms</Nav.Link>
+	          <Nav.Link href="/rooms">Rooms</Nav.Link>
+	  	 <Nav.Link href="/Gallery">Tattoo Gallery</Nav.Link>
 	      </Nav>
 	      </Container>
 	 </Navbar>		
