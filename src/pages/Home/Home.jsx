@@ -16,13 +16,23 @@ export default function Home(){
       >
         Rooms
       </button>
+
       <button
         onClick={() => navigateToPage('/gallery')}
         className="page-button"
       >
         Tattoo Design Gallery
       </button> 
-    </div>
+
+
+      <button
+        onClick={() => navigateToPage('/fonts')}
+        className="page-button"
+      >
+        Fonts Preview
+      </button> 
+
+	  </div>
 
 
   );
