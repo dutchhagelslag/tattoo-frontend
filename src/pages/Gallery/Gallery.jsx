@@ -43,8 +43,10 @@ export default function Gallery() {
 
                     <a 
       		   data-lg-size="1406-1390" 
-	    	   href="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a">
-
+	    	   href="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a"
+                        data-sub-html="<h4>Photo by - Bad</h4><p> 
+					   Artist - Minnie</p>"
+		> 
                     <img 
 			alt="img2" 
 			className="img-responsive"
@@ -54,6 +56,10 @@ export default function Gallery() {
 
 		<a href="https://preview.redd.it/msm091nhzci01.jpg?width=960&crop=smart&auto=webp&s=5dbcc05c38864f8fdc045a5f90f7bb127160e884">
                     <img alt="img1" src="https://preview.redd.it/msm091nhzci01.jpg?width=960&crop=smart&auto=webp&s=5dbcc05c38864f8fdc045a5f90f7bb127160e884" />
+                        data-sub-html="<h4>Photo by - Bad</h4><p> 
+					   Artist - Minnie</p>"
+		> 
+ 
                 </a>
             </LightGallery>
         </div>
