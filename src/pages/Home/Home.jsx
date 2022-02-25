@@ -20,7 +20,7 @@ export default function Home(){
         onClick={() => navigateToPage('/gallery')}
         className="page-button"
       >
-        Tattoo Gallery
+        Tattoo Design Gallery
       </button> 
     </div>
 
