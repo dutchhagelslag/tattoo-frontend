@@ -21,7 +21,7 @@ export default function Home(){
         onClick={() => navigateToPage('/gallery')}
         className="page-button"
       >
-        Tattoo Design Gallery
+        Artists Gallery (slideshow)
       </button> 
 
       <button
@@ -33,10 +33,10 @@ export default function Home(){
 
 
 	<button
-	  onClick={() => navigateToPage('/artists')}
+	  onClick={() => navigateToPage('/grid')}
 	  className="page-button"
 	 >
-	  All available artists
+	  Tattoo Designs grid 
 	 </button>
 
 	</div>
