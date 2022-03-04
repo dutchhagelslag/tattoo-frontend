@@ -1,41 +1,93 @@
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
+import { Carousel } from 'react-carousel-minimal';
 
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
-import LightGallery from 'lightgallery/react';
+function App() {
+ const data = [
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    },
+    {
+      image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
+      caption: "Font: Arial"
+    }
+    
+  ];
 
-import './fonts.css';
-
-export default function Gallery() {
-    const onInit = () => {
-        console.log('lightGallery has been initialized');
-    };
-
-    return (
-
-        <div className="App">
-            <LightGallery
-                onInit={onInit}
-	        mode="lg-fade"
-                plugins={[lgThumbnail, lgZoom]}
-            >
-                    <a
-                        data-lg-size="1400-1400"
-                        className="gallery-item"
-                        href="https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png"
-                        data-sub-html="<h4>Font Name: Arial</h4><p> 
-					   </p>"
-                    >
-                        <img
-			    alt ="img"
-                            className="img-responsive"
-                            src="https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png"
-                        />
-                    </a>
-
-            </LightGallery>
+  const captionStyle = {
+    fontSize: '2em',
+    fontWeight: 'bold',
+  }
+  const slideNumberStyle = {
+    fontSize: '20px',
+    fontWeight: 'bold',
+  }
+  return (
+    <div className="App">
+      <div style={{ textAlign: "center" }}>
+        <h2>Font COLLECTION</h2>
+        <p>Browse for Fonts of your choice.</p>
+        <div style={{
+          padding: "0 20px"
+        }}>
+          <Carousel
+            data={data}
+            time={3000}
+            width="1920px"
+            height="1080px"
+            captionStyle={captionStyle}
+            radius="10px"
+            slideNumber={true}
+            slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="contain"
+            thumbnails={true}
+            thumbnailWidth="100px"
+            style={{
+              textAlign: "center",
+              maxWidth: "1920px",
+              maxHeight: "1080px",
+              margin: "40px auto",
+            }}
+          />
         </div>
-    );
+      </div>
+    </div>
+  );
 }
+
+export default App;
+
+
