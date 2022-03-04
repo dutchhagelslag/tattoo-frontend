@@ -10,20 +10,19 @@ export default function Home(){
 
   return (
     <div className="content">
-      <button
+       <button
         onClick={() => navigateToPage('/rooms')}
         className="page-button"
       >
         Rooms
       </button>
 
-      <button
+     <button
         onClick={() => navigateToPage('/gallery')}
         className="page-button"
       >
         Tattoo Design Gallery
       </button> 
-
 
       <button
         onClick={() => navigateToPage('/fonts')}
@@ -32,7 +31,15 @@ export default function Home(){
         Fonts Preview
       </button> 
 
-	  </div>
+
+	<button
+	  onClick={() => navigateToPage('/artists')}
+	  className="page-button"
+	 >
+	  All available artists
+	 </button>
+
+	</div>
 
 
   );

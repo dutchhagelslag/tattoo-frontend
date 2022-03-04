@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import Rooms from './pages/Rooms/Rooms';
 import Gallery from './pages/Gallery/Gallery';
 import Fonts from './pages/Fonts/Fonts';
+import Artists from './pages/Artists/Artists';
 
 import './App.css';
 
@@ -22,7 +23,7 @@ function App() {
 	          <Nav.Link className="Navbar-subtitle" href="/rooms">Rooms</Nav.Link>
 	  	  <Nav.Link className="Navbar-subtitle" href="/Gallery">Tattoo Design Gallery</Nav.Link>
 	  	  <Nav.Link className="Navbar-subtitle" href="/Fonts">Fonts Gallery</Nav.Link>
-	   
+		<Nav.Link className="Navbar-subtitle" href="/Artists">All available artists</Nav.Link>	   
 	      </Nav>
 	      </Container>
 	 </Navbar>		
@@ -45,6 +46,9 @@ function App() {
             <Route exact={true} path={'/fonts'}>
               <Fonts />
             </Route>
+	   <Route exact={true} path={'/artists'}>
+	  	<Artists />
+	   </Route>
           </Switch>
         </Router>
       </div>
