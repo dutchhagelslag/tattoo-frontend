@@ -7,6 +7,8 @@
 - `lightgallery`: to install run `npm install lightgallery`
 - `react-bootstrap` : to install I ran `npm install react-bootstrap
 - `bootstrap`: to install I ran `npm install bootstrap`
+- netlify url: https://tattoohenna.netlify.app/
+
 ## To run: 
 `npm run start`
 
