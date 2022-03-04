@@ -12,7 +12,7 @@ To install requirements run `npm install`
 - `lightgallery`: to install run `npm install lightgallery`
 - `react-bootstrap` : to install I ran `npm install react-bootstrap`
 - `bootstrap`: to install I ran `npm install bootstrap`
-
+- `react-grid-gallery`: 
 ## Site structure: 
 ADD NAVIGATION SCHEMA HERE
 
