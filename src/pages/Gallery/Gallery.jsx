@@ -1,67 +1,110 @@
-//import React, {useEffect, useState} from 'react';
-//import axios from 'axios';
-//import {useHistory} from 'react-router-dom';
+import { Carousel } from 'react-carousel-minimal';
 
+function App() {
+ const data = [
+    {
+      image: "https://images.pexels.com/photos/1054289/pexels-photo-1054289.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      caption: "Artist: Jacob"
+    },
+    {
+      image: "https://www.birchbox.co.uk/images/uploads/Oct_BoxDesign_Screensaver_Desktop1920x1080px_02.jpg",
+      caption: "Artist: Kayla"
+    },
+    {
+      image: "https://cdn.wallpapersafari.com/60/89/p3dYDj.jpg",
+      caption: "Artist: Ben"
+    },
+    {
+      image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
+      caption: "Artist: John"
+    },
+    {
+      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
+      caption: "Artist: Daniel"
+    },
+    {
+      image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
+      caption: "Artist: Scott"
+    },
+    {
+      image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
+      caption: "Artist: Dan"
+    },
+    {
+      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
+      caption: "Artist: Trudy"
+    },
+    {
+      image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
+      caption: "Artist: Chloe"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Artist: Simon"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Artist: Donald"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Artist: Tom"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Arist: Thomas"
+    },
+    {
+      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
+      caption: "Artist: Nancy"
+    }
+  ];
 
-
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
-
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
-import LightGallery from 'lightgallery/react';
-
-import './gallery.css';
-
-export default function Gallery() {
-    const onInit = () => {
-        console.log('lightGallery has been initialized');
-    };
-
-    return (
-
-        <div className="App">
-            <LightGallery
-                onInit={onInit}
-	        mode="lg-fade"
-                plugins={[lgThumbnail, lgZoom]}
-            >
-                    <a
-                        data-lg-size="1400-1400"
-                        className="gallery-item"
-                        href="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg"
-                        data-sub-html="<h4>Photo by - Good</h4><p> 
-					   Artist - Lucki</p>"
-                    >
-                        <img
-			    alt ="img"
-                            className="img-responsive"
-                            src="https://static.stereogum.com/uploads/2019/02/Lucki-1550606994.jpg"
-                        />
-                    </a>
-
-                    <a 
-      		   data-lg-size="1406-1390" 
-	    	   href="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a"
-                        data-sub-html="<h4>Photo by - Bad</h4><p> 
-					   Artist - Minnie</p>"
-		> 
-                    <img 
-			alt="img2" 
-			className="img-responsive"
-			src="https://external-preview.redd.it/datPPgSO8PbVrEIvDnB-oLvziOFin2ToDadRNdjbVbw.jpg?width=640&crop=smart&auto=webp&s=3959b5613a669040659e4fc28000d2d33c429c2a" />
-
-                </a>
-
-		<a href="https://preview.redd.it/msm091nhzci01.jpg?width=960&crop=smart&auto=webp&s=5dbcc05c38864f8fdc045a5f90f7bb127160e884">
-                    <img alt="img1" src="https://preview.redd.it/msm091nhzci01.jpg?width=960&crop=smart&auto=webp&s=5dbcc05c38864f8fdc045a5f90f7bb127160e884" />
-                        data-sub-html="<h4>Photo by - Bad</h4><p> 
-					   Artist - Minnie</p>"
-		> 
- 
-                </a>
-            </LightGallery>
+  const captionStyle = {
+    fontSize: '2em',
+    fontWeight: 'bold',
+  }
+  const slideNumberStyle = {
+    fontSize: '20px',
+    fontWeight: 'bold',
+  }
+  return (
+    <div className="App">
+      <div style={{ textAlign: "center" }}>
+        <h2>TATTOO COLLECTION</h2>
+        <p>Browse for designs of your choice.</p>
+        <div style={{
+          padding: "0 20px"
+        }}>
+          <Carousel
+            data={data}
+            time={3000}
+            width="1920px"
+            height="1080px"
+            captionStyle={captionStyle}
+            radius="10px"
+            slideNumber={true}
+            slideNumberStyle={slideNumberStyle}
+            captionPosition="bottom"
+            automatic={true}
+            dots={true}
+            pauseIconColor="white"
+            pauseIconSize="40px"
+            slideBackgroundColor="darkgrey"
+            slideImageFit="contain"
+            thumbnails={true}
+            thumbnailWidth="100px"
+            style={{
+              textAlign: "center",
+              maxWidth: "1920px",
+              maxHeight: "1080px",
+              margin: "40px auto",
+            }}
+          />
         </div>
-    );
+      </div>
+    </div>
+  );
 }
+
+export default App;
