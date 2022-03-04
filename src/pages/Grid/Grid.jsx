@@ -14,10 +14,11 @@ function App() {
   ];
 
   return(
-	<div className="App"> 	
-	    <h1>. </h1> 
+	<div style={{display: "block", width: "90%"}} > 	
+	    <h1>Tattoo Designs</h1> 
 	    <div><Gallery images={data}
-	        rowHeight="200px"
+	        rowHeight= "180"
+	  	enableImageSelection={false}
 	    /> </div>
 	</div>
 	
