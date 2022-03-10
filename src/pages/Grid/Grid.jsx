@@ -15,34 +15,33 @@ function App() {
 	src: "https://i.pinimg.com/originals/8b/5a/8f/8b5a8fd8301c37f53f7ceb3990427111.jpg",
 	thumbnail:"https://i.pinimg.com/originals/8b/5a/8f/8b5a8fd8301c37f53f7ceb3990427111.jpg",
 	thumbnailWidth: 600,
-	thumbnailHeight: 300,    
+	thumbnailHeight: 600,    
 	caption: "Artist: Ginkgo"
     },
     {
 	src: "https://i.pinimg.com/750x/1a/b4/7f/1ab47ff65232f8a327c43543e9d9c79c.jpg",
 	thumbnail: "https://i.pinimg.com/750x/1a/b4/7f/1ab47ff65232f8a327c43543e9d9c79c.jpg",
-	thumbnailWidth: 600,
-	thumbnailHeight: 300,    
+	thumbnailWidth: 293,
+	thumbnailHeight: 521,    
 	caption: "Hand lines",
     },
-	 {
-		 src: "https://i.pinimg.com/750x/d6/6e/1c/d66e1c00e0889f8de2f783eaf94d9a35.jpg",
-		 thumbnail: "https://i.pinimg.com/750x/d6/6e/1c/d66e1c00e0889f8de2f783eaf94d9a35.jpg",
-		 thumbnailWidth: 600,
-	thumbnailHeight: 300,    
-	 caption: "@adrianmactattoo"
+    {
+	src: "https://i.pinimg.com/750x/d6/6e/1c/d66e1c00e0889f8de2f783eaf94d9a35.jpg",
+	thumbnail: "https://i.pinimg.com/750x/d6/6e/1c/d66e1c00e0889f8de2f783eaf94d9a35.jpg",
+	thumbnailWidth: 343,
+ 	thumbnailHeight: 611,    
+	caption: "@adrianmactattoo"
     } 
 
   ];
 
   return(
-	<div className="grid"  > 	
-	   
-	<h1 className="invisible">bla</h1>  
+	<div className="grid"  > 	   
+	   <h1 className="invisible">bla</h1>  
 	   <Gallery images={data}
 	        rowHeight={300}
 	  	enableImageSelection={false}
-	    />
+	   />
 	</div>
 	
   );
