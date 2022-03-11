@@ -67,8 +67,9 @@ function App() {
   return (
     <div className="App">
       <div style={{ textAlign: "center" }}>
-        <h2>TATTOO COLLECTION</h2>
-        <p>Browse for designs of your choice.</p>
+        <h1>TATTOO COLLECTION</h1>
+        <h1 style={{ color: 'White' }}>Browse for your favorite tattoo genre and artist name</h1>
+        <a href="https://www.firstclasstattoos.com">Visit Tattoo Parlor</a>
         <div style={{
           padding: "0 20px"
         }}>
@@ -76,7 +77,7 @@ function App() {
             data={data}
             time={10000}
             width="2300px"
-            height="1100px"
+            height="1000px"
             captionStyle={captionStyle}
             radius="10px"
             slideNumber={true}
@@ -89,11 +90,11 @@ function App() {
             slideBackgroundColor="black"
             slideImageFit="contain"
             thumbnails={true}
-            thumbnailWidth="300px"
+            thumbnailWidth="200px"
             style={{
               textAlign: "center",
-              maxWidth: "1920px",
-              maxHeight: "1080px",
+              maxWidth: "3000px",
+              maxHeight: "1500px",
               margin: "40px auto",
             }}
           />
