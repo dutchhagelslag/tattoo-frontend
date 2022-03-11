@@ -23,60 +23,36 @@ function App() {
 
  const data = [
     {
-      image: "https://images.pexels.com/photos/1054289/pexels-photo-1054289.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      caption: "Artist: Jacob"
+      image: "https://static.wixstatic.com/media/1900bd_7f207d128dc143748e00bf84925da3d1~mv2.jpeg/v1/fill/w_1242,h_1187,al_c,q_85,enc_auto/1900bd_7f207d128dc143748e00bf84925da3d1~mv2.jpeg",
+      caption: "Artist: Mikhail @MikhailAndersson"
     },
     {
-      image: "https://www.birchbox.co.uk/images/uploads/Oct_BoxDesign_Screensaver_Desktop1920x1080px_02.jpg",
-      caption: "Artist: Kayla"
+      image: "https://static.wixstatic.com/media/1900bd_6d2bb3ac21194fdf928ee10c337afd65~mv2.jpeg/v1/fill/w_1242,h_849,al_c,q_85,enc_auto/1900bd_6d2bb3ac21194fdf928ee10c337afd65~mv2.jpeg",
+      caption: "Artist: Dmitry @Dmitry.NYC"
     },
     {
-      image: "https://cdn.wallpapersafari.com/60/89/p3dYDj.jpg",
-      caption: "Artist: Ben"
+      image: "https://static.wixstatic.com/media/1900bd_1fe33b885a914512ad8fcc2310af624a~mv2.jpeg/v1/fill/w_1242,h_1186,al_c,q_85,enc_auto/1900bd_1fe33b885a914512ad8fcc2310af624a~mv2.jpeg",
+      caption: "Artist: Abigail @abi.kishibe.tattoos"
     },
     {
-      image: "https://static2.tripoto.com/media/filter/tst/img/735873/TripDocument/1537686560_1537686557954.jpg",
-      caption: "Artist: John"
+      image: "https://static.wixstatic.com/media/1900bd_2d345aff1ca749b281e4176eedaf444c~mv2.jpeg/v1/fill/w_1242,h_1162,al_c,q_85,enc_auto/1900bd_2d345aff1ca749b281e4176eedaf444c~mv2.jpeg",
+      caption: "Artist: Nina @nina.p.tattoo"
     },
     {
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg",
-      caption: "Artist: Daniel"
+      image: "https://static.wixstatic.com/media/1900bd_078fd675345940e68cc6d18a406a823b~mv2.jpeg/v1/fill/w_2646,h_1954,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/1900bd_078fd675345940e68cc6d18a406a823b~mv2.jpeg",
+      caption: "Artist: Weng @Wenghiskhan_tattoos"
     },
     {
-      image: "https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg",
-      caption: "Artist: Scott"
+      image: "https://static.wixstatic.com/media/1900bd_f8514d552c154255ab61248c18eae6a5~mv2.jpg/v1/fill/w_1184,h_1080,al_c,q_85,enc_auto/1900bd_f8514d552c154255ab61248c18eae6a5~mv2.jpg",
+      caption: "Artist: Ledwin @LedHeadTattoos"
     },
     {
-      image: "https://www.tusktravel.com/blog/wp-content/uploads/2020/07/Best-Time-to-Visit-Darjeeling-for-Honeymoon.jpg",
-      caption: "Artist: Dan"
+      image: "https://static.wixstatic.com/media/1900bd_14a4b109b30d4de39be37defbf29c96a~mv2.jpeg/v1/fill/w_1242,h_1215,al_c,q_85,enc_auto/1900bd_14a4b109b30d4de39be37defbf29c96a~mv2.jpeg",
+      caption: "Artist: Sasha @sashatattoo.nyc"
     },
     {
-      image: "https://www.omm.com/~/media/images/site/locations/san_francisco_780x520px.ashx",
-      caption: "Artist: Trudy"
-    },
-    {
-      image: "https://images.ctfassets.net/bth3mlrehms2/6Ypj2Qd3m3jQk6ygmpsNAM/61d2f8cb9f939beed918971b9bc59bcd/Scotland.jpg?w=750&h=422&fl=progressive&q=50&fm=jpg",
-      caption: "Artist: Chloe"
-    },
-    {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Artist: Simon"
-    },
-    {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Artist: Donald"
-    },
-    {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Artist: Tom"
-    },
-    {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Arist: Thomas"
-    },
-    {
-      image: "https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/02/summer-7.jpg",
-      caption: "Artist: Nancy"
+      image: "https://static.wixstatic.com/media/1900bd_b1329c87b6764b51acd4009fb852d739~mv2.jpeg/v1/fill/w_1242,h_1543,al_c,q_85,enc_auto/1900bd_b1329c87b6764b51acd4009fb852d739~mv2.jpeg",
+      caption: "Artist: Radames @radames_tattoo"
     }
   ];
 
@@ -98,9 +74,9 @@ function App() {
         }}>
           <Carousel
             data={data}
-            time={3000}
-            width="1920px"
-            height="1080px"
+            time={10000}
+            width="2300px"
+            height="1100px"
             captionStyle={captionStyle}
             radius="10px"
             slideNumber={true}
@@ -108,12 +84,12 @@ function App() {
             captionPosition="bottom"
             automatic={true}
             dots={true}
-            pauseIconColor="white"
+            pauseIconColor="black"
             pauseIconSize="40px"
-            slideBackgroundColor="darkgrey"
+            slideBackgroundColor="black"
             slideImageFit="contain"
             thumbnails={true}
-            thumbnailWidth="100px"
+            thumbnailWidth="300px"
             style={{
               textAlign: "center",
               maxWidth: "1920px",
