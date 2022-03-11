@@ -1,6 +1,26 @@
 import { Carousel } from 'react-carousel-minimal';
 
 function App() {
+    
+  // api call for all design jsons
+    const get_all_designs = () =>{
+	const url = "https://ta2h3nna.herokuapp.com/all_designs"
+	const options = {
+	    method: "GET",
+	    headers: {
+		Accept: "application/json",
+		"Content-Type": "application/json;charset=UTF-8",
+	    },
+	};
+
+	fetch(url, options)
+	    .then((response) => response.json())
+	    .then((data) => {
+		console.log(data);
+	    });
+    }
+
+
  const data = [
     {
       image: "https://images.pexels.com/photos/1054289/pexels-photo-1054289.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",

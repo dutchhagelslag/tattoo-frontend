@@ -21,9 +21,9 @@ function App() {
 	      <Navbar.Brand className="Navbar-title" href="/">Ta2H3nna</Navbar.Brand>
 	      <Nav className="me-auto">
 	          <Nav.Link className="Navbar-subtitle" href="/rooms">Rooms</Nav.Link>
-	  	  <Nav.Link className="Navbar-subtitle" href="/Gallery">Artists Gallery</Nav.Link>
-	  	  <Nav.Link className="Navbar-subtitle" href="/Fonts">Fonts Gallery</Nav.Link>
-		  <Nav.Link className="Navbar-subtitle" href="/Grid">Tattoo Designs grid</Nav.Link>	   
+	  	  <Nav.Link className="Navbar-subtitle" href="/gallery">Artists Gallery</Nav.Link>
+	  	  <Nav.Link className="Navbar-subtitle" href="/fonts">Fonts Gallery</Nav.Link>
+		  <Nav.Link className="Navbar-subtitle" href="/grid">Tattoo Designs grid</Nav.Link>	   
 	      </Nav>
 	      </Container>
 	 </Navbar>		
