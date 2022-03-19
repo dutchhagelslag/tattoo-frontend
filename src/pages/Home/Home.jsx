@@ -38,9 +38,16 @@ export default function Home(){
 	 >
 	  Tattoo Designs grid 
 	 </button>
+        <button
+        onClick={() => navigateToPage('/map')}
+        className="page-button"
+      >
+        Map
+      </button>
 
 	</div>
-
+	
+      
 
   );
 };
