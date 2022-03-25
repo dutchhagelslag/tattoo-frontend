@@ -73,7 +73,7 @@ function App() {
 
 
   return(
-	<div className="grid"  > 	   
+	<div className="grid" > 	   
 	   <h1 className="invisible">bla</h1>  
 	   <Gallery images={Data}
 	        rowHeight={300}
