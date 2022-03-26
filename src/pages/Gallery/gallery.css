@@ -12,6 +12,12 @@
   justify-content: space-between;
 }
 
+.carousel {
+  justify-content:center;
+  display: flex;
+  margin-left: 5%;
+}
+
 .create-modal {
   position: absolute;
   z-index: 1000;
