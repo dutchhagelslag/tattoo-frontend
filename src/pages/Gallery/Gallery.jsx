@@ -84,7 +84,7 @@ function App() {
             automatic={true}
             dots={true}
 	    pause="hover"
-            
+            slideNumberStyle={slideNumberStyle}  
             pauseIconSize="40px"
             slideBackgroundColor="black"
             slideImageFit="contain"
