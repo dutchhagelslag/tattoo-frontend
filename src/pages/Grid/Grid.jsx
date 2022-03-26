@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import Gallery from 'react-grid-gallery';
 
 function App() {
@@ -15,22 +15,21 @@ function App() {
 	}
     };
 
-    fetch(url, options)
-	.then(response => response.json())
-	// .then(rsp => {rsp)})
-	.then(data => {
-	    // console.log(data);
-	    const images = JSON.parse(data);
-	    const to_data = image => ({src: image.src, thumbnail: image.src, thumbnailWidth: image.thumbnailWidth, thumbnailHeight: image.thumbnailHeight, caption: image.caption});
-
-	    const test = images.map(to_data);
-	    setData(test);
-	    console.log(test);
-	})
-	.catch (err =>{
-	    console.log(err);
-	})
-
+    useEffect(() => {
+        fetch(url, options)
+    	    .then(response => response.json())
+	    .then(response => JSON.parse(response))
+    	    .then(images => {
+    	        const to_data = image => ({src: image.src, thumbnail: image.src, thumbnailWidth: image.thumbnailWidth, thumbnailHeight: image.thumbnailHeight, caption: image.caption});
+    
+    	        const test = images.map(to_data);
+    	        setData(test);
+    	        console.log(test);
+    	    })
+    	    .catch (err =>{
+    	        console.log(err);
+    	    })
+    }, []);
 
   return(
 	<div className="grid" > 	   
