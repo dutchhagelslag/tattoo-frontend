@@ -1,10 +1,8 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import React from 'react'; import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Navbar, Nav, Container} from 'react-bootstrap'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home/Home';
-import Rooms from './pages/Rooms/Rooms';
 import Gallery from './pages/Gallery/Gallery';
 import Fonts from './pages/Fonts/Fonts';
 import Grid from './pages/Grid/Grid';
@@ -20,7 +18,6 @@ function App() {
 	      <Container>
 	      <Navbar.Brand className="Navbar-title" href="/">Ta2H3nna</Navbar.Brand>
 	      <Nav className="me-auto">
-	          <Nav.Link className="Navbar-subtitle" href="/rooms">Rooms</Nav.Link>
 	  	  <Nav.Link className="Navbar-subtitle" href="/gallery">Artists Gallery</Nav.Link>
 	  	  <Nav.Link className="Navbar-subtitle" href="/fonts">Fonts Gallery</Nav.Link>
 		  <Nav.Link className="Navbar-subtitle" href="/grid">Tattoo Designs grid</Nav.Link>	   
@@ -37,10 +34,7 @@ function App() {
             <Route exact={true} path={'/'}>
               <Home />
             </Route>
-            <Route exact={true} path={'/rooms'}>
-              <Rooms />
-            </Route>
-            <Route exact={true} path={'/gallery'}>
+           <Route exact={true} path={'/gallery'}>
               <Gallery />
 	    </Route>
             <Route exact={true} path={'/fonts'}>
