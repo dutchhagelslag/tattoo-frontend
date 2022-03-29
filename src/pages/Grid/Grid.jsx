@@ -15,6 +15,7 @@ function App() {
 	}
     };
 
+<<<<<<< HEAD
 
     const to_data = image => ({src: image.src, 
 			       thumbnail: image.src, 
@@ -36,6 +37,43 @@ function App() {
     	    })
     });
 
+=======
+<<<<<<< HEAD
+    fetch(url, options)
+	.then(response => response.json())
+        .then(rsp_json => JSON.parse(rsp_json))
+	.then(images => {
+	    const to_data = image => ({src: image.src, 
+				       thumbnail: image.src, 
+				       thumbnailWidth: image.thumbnailWidth, 
+				       thumbnailHeight: image.thumbnailHeight, 
+				       caption: image.caption});
+	    const test = images.map(to_data);
+	    setData(test);
+	    console.log(test);
+	})
+	.catch (err =>{
+	    console.log(err);
+	})
+
+=======
+    useEffect(() => {
+        fetch(url, options)
+    	    .then(response => response.json())
+	    .then(response => JSON.parse(response))
+    	    .then(images => {
+    	        const to_data = image => ({src: image.src, thumbnail: image.src, thumbnailWidth: image.thumbnailWidth, thumbnailHeight: image.thumbnailHeight, caption: image.caption});
+    
+    	        const test = images.map(to_data);
+    	        setData(test);
+    	        console.log(test);
+    	    })
+    	    .catch (err =>{
+    	        console.log(err);
+    	    })
+    });
+>>>>>>> bd07d594d9e382cc20566f420937e1ea748c3182
+>>>>>>> baf74c6a9ddbb28d793874a1d3e9374d38615255
 
   return(
 	<div className="grid" > 	   
