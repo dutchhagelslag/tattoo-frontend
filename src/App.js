@@ -1,5 +1,4 @@
-import React from 'react'; import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { Navbar, Nav, Container} from 'react-bootstrap'; 
+import React from 'react'; import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; import { Navbar, Nav, Container} from 'react-bootstrap'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './pages/Home/Home';
@@ -21,6 +20,7 @@ function App() {
 	  	  <Nav.Link className="Navbar-subtitle" href="/gallery">Artists Gallery</Nav.Link>
 	  	  <Nav.Link className="Navbar-subtitle" href="/fonts">Fonts Gallery</Nav.Link>
 		  <Nav.Link className="Navbar-subtitle" href="/grid">Tattoo Designs grid</Nav.Link>	   
+		  <Nav.Link className="Navbar-subtitle" href="/upload">Upload</Nav.Link>	   
 	      </Nav>
 	      </Container>
 	 </Navbar>		

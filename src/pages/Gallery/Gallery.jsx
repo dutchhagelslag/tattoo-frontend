@@ -71,32 +71,29 @@ function App() {
         <h1 style={{ color: 'White' }}>Browse for your favorite tattoo genre and artist name</h1>
         <a href="https://www.firstclasstattoos.com">Visit Tattoo Parlor</a>
         <div style={{
-          padding: "0 20px"
+          padding: "0 0"
         }}>
           <Carousel
             data={data}
-            time={10000}
-            width="2300px"
-            height="1000px"
+            time={20000}
+	    height="700px"
+            width="1000x"
             captionStyle={captionStyle}
             radius="10px"
-            slideNumber={true}
-            slideNumberStyle={slideNumberStyle}
             captionPosition="bottom"
             automatic={true}
             dots={true}
-            pauseIconColor="black"
+	    pause="hover"
+            slideNumberStyle={slideNumberStyle}  
             pauseIconSize="40px"
             slideBackgroundColor="black"
             slideImageFit="contain"
+	    variant="dark" 
             thumbnails={true}
-            thumbnailWidth="200px"
-            style={{
-              textAlign: "center",
-              maxWidth: "3000px",
-              maxHeight: "1500px",
-              margin: "40px auto",
-            }}
+            thumbnailWidth="100px"
+            className="carousel"
+
+	  
           />
         </div>
       </div>
