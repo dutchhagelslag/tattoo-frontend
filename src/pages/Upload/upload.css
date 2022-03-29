@@ -1,25 +1,27 @@
-.App {
-  
-  margin-bottom: 200px;
-}
-.user-item  {
+.rooms-error-box {
   width: 100%;
   padding: 10px;
-  border: 1px solid gray;
   border-radius: 5px;
+  background-color: #EF0444;
+}
+
+.rooms-header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.carousel {
-  justify-content:center;
+.rooms-list {
+  width: 100%;
   display: flex;
-  margin-left: 5%;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .create-modal {
   position: absolute;
+  top: 40%;
   z-index: 1000;
   width: 400px;
   height: 200px;

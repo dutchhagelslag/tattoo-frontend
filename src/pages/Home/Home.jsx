@@ -10,6 +10,7 @@ export default function Home(){
 
   return (
     <div className="content">
+
      <button
         onClick={() => navigateToPage('/gallery')}
         className="page-button"
@@ -37,6 +38,14 @@ export default function Home(){
       >
         Map
       </button>
+
+     <button
+        onClick={() => navigateToPage('/upload')}
+        className="page-button"
+      >
+        Upload Tattoo
+      </button> 
+
 
 	</div>
 	
