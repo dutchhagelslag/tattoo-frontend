@@ -1,5 +1,21 @@
 import { Carousel } from 'react-carousel-minimal';
 
+function App(){
+
+
+
+ return(
+	 
+    <div>
+        <h1>Under construction pls ignore</h1>
+
+	<div class="testFont" >Wassup</div>
+    </div>
+ );
+}
+export default App;
+
+/*
 function App() {
  const data = [
     {
@@ -89,5 +105,5 @@ function App() {
 }
 
 export default App;
-
+*/
 
