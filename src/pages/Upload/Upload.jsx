@@ -1,38 +1,54 @@
-import { Carousel } from 'react-carousel-minimal';
+import React from 'react';
+import { Field, Form, Formik } from 'formik';
+
+const SignupForm = () => {
+  return (
+    <>
+      <h1 style={{color: 'White'}}>Upload Tattoo</h1>
+      <Formik
+
+        initialValues={{
+            tattooName: '',
+            artistName: '',
+            genre: '',
+            cost: '', // added for our checkbox
+            src: '', // url to public backblaze store
+            caption: '',
+            thumbnailHeight: '',
+            thumbnailWidth: ''
+        }}
+
+        onSubmit={(values, { setSubmitting }) => {
+            console.log(values.email); // make all the api calls
+        }}
+      >
+        <Form>
+          <Field type="text" name="tattoo name" placeholder="tattoo name" />
+
+          <Field type="text" name="artist name" placeholder="artist name" />
+
+          <Field type="text" name="genre" placeholder="genre" />
+
+          <Field type="text" name="cost" placeholder="cost" />
+
+          <Field type="text" name="caption" placeholder="caption" />
+
+          {/* <MyCheckbox name="acceptedTerms"> */}
+          {/*   I accept the terms and conditions */}
+          {/* </MyCheckbox> */}
+
+          <button type="submit">Submit</button>
+        </Form>
+      </Formik>
+    </>
+  );
+};
+
 
 function App() {
 
-    const [Data,setData]= useState([])
-
-    // api call
-    const url = "https://ta2h3nna.herokuapp.com/all_designs"
-    const options = {
-        method: "GET",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json;charset=UTF-8",
-        }
-    };
-
-    fetch(url, options)
-        .then(response => response.json())
-        // .then(rsp => {rsp)})
-        .then(data => {
-            // console.log(data);
-            const images = JSON.parse(data);
-            const to_data = image => ({src: image.src, thumbnail: image.src, thumbnailWidth: image.thumbnailWidth, thumbnailHeight: image.thumbnailHeight, caption: image.caption});
-
-            const test = images.map(to_data);
-            setData(test);
-            console.log(test);
-        })
-        .catch (err =>{
-            console.log(err);
-        })
-
   return (
-    <div className="App">
-    </div>
+      <div>{SignupForm()} </div>
   );
 }
 

@@ -59,11 +59,13 @@ function App() {
   const captionStyle = {
     fontSize: '2em',
     fontWeight: 'bold',
-  }
+  };
+
   const slideNumberStyle = {
     fontSize: '20px',
     fontWeight: 'bold',
-  }
+  };
+
   return (
     <div className="App">
       <div style={{ textAlign: "center" }}>

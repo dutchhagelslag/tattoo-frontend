@@ -1,12 +1,12 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState } from 'react';
 import Gallery from 'react-grid-gallery';
 
 function App() {
 
-    const [Data,setData]= useState([])
+    const [Data,setData] = useState([]);
     
     // api call
-    const url = "https://ta2h3nna.herokuapp.com/all_designs"
+    const url = "https://ta2h3nna.herokuapp.com/all_designs";
     const options = {
 	method: "GET",
 	headers: {
@@ -17,8 +17,8 @@ function App() {
 
     const to_data = image => ({src: image.src, 
 			       thumbnail: image.src, 
-			       thumbnailWidth: image.thumbnailWidth, 
-			       thumbnailHeight: image.thumbnailHeight, 
+			       thumbnailWidth: parseInt(image.thumbnailWidth), 
+			       thumbnailHeight: parseInt(image.thumbnailHeight), 
 			       caption: image.caption});
 
     useEffect(() => {
@@ -32,9 +32,10 @@ function App() {
     	    })
     	    .catch (err =>{
     	        console.log(err);
-    	    })
-    });
-
+    	    });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+    
   return(
 	<div className="grid" > 	   
 	   <h1 className="invisible">bla</h1>  

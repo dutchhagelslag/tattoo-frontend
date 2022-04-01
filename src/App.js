@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Gallery from './pages/Gallery/Gallery';
 import Fonts from './pages/Fonts/Fonts';
 import Grid from './pages/Grid/Grid';
+import Upload from './pages/Upload/Upload.jsx';
 
 import './App.css';
 
@@ -42,6 +43,9 @@ function App() {
             </Route>
 	   <Route exact={true} path={'/grid'}>
 	  	<Grid />
+	   </Route>
+	   <Route exact={true} path={'/upload'}>
+	  	<Upload />
 	   </Route>
           </Switch>
         </Router>
