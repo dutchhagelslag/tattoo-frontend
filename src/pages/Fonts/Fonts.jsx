@@ -1,3 +1,5 @@
+import './fonts.css'
+
 function App(){
 
 
@@ -7,7 +9,9 @@ function App(){
     <div>
         <h1>Under construction pls ignore</h1>
 
-	<div class="testFont" >Wassup</div>
+	<p className="testFont" >Wassup</p>
+	<p className="testFont">2</p>
+	<p className="testFont">3</p>
     </div>
  );
 }
