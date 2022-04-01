@@ -1,5 +1,3 @@
-import { Carousel } from 'react-carousel-minimal';
-
 function App(){
 
 
