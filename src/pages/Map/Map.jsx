@@ -1,26 +1,46 @@
-import React from "react";
-import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
+import React from 'react'
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
-function Map() {
-    return (
-        <GoogleMap 
-            defaultZoom={10} 
-            defaultCenter={{lat:45.421532,lng:-75.697189}}
-         />;
-    );
+const containerStyle = {
+  width: '400px',
+  height: '400px'
+};
+
+const center = {
+  lat: -3.745,
+  lng: -38.523
+};
+
+function MyComponent() {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: "AIzaSyAiuIYPo_PQ6UbF2nwnA9Ha08nEMuv8t5k"
+  })
+
+  const [map, setMap] = React.useState(null)
+
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds();
+    map.fitBounds(bounds);
+    setMap(map)
+  }, [])
+
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null)
+  }, [])
+
+  return isLoaded ? (
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={10}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+        { /* Child components, such as markers, info windows, etc. */ }
+        <></>
+      </GoogleMap>
+  ) : <></>
 }
 
-const WrappedMap = withScriptjs(withGoogleMap(Map));
-
-export default function App() {
-    return (
-        <div style= {{width: '100vw',height: "100vh"}}>
-            <WrappedMap 
-                googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places'}
-                loadingElement={<div style={{ height: "100%" }}>}
-                containerElement={<div style={{ height: "100%" }}>}
-                mapElement={<div style={{ height: "100%" }}>}
-            />
-        </div>;
-    );
-}
+export default React.memo(MyComponent)
