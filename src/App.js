@@ -6,6 +6,7 @@ import Gallery from './pages/Gallery/Gallery';
 import Fonts from './pages/Fonts/Fonts';
 import Grid from './pages/Grid/Grid';
 import Upload from './pages/Upload/Upload.jsx';
+import Map from './pages/Map/Map.jsx';
 
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
 	  	  <Nav.Link className="Navbar-subtitle" href="/fonts">Fonts Gallery</Nav.Link>
 		  <Nav.Link className="Navbar-subtitle" href="/grid">Tattoo Designs grid</Nav.Link>	   
 		  <Nav.Link className="Navbar-subtitle" href="/upload">Upload</Nav.Link>	   
+		  <Nav.Link className="Navbar-subtitle" href="/map">Map</Nav.Link>	   
 	      </Nav>
 	      </Container>
 	 </Navbar>		
@@ -47,6 +49,9 @@ function App() {
 	   <Route exact={true} path={'/upload'}>
 	  	<Upload />
 	   </Route>
+           <Route exact={true} path={'/map'}>
+                <Map />
+           </Route>
           </Switch>
         </Router>
       </div>
