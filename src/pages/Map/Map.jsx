@@ -18,7 +18,7 @@ function MyComponent() {
   })
 
   const [map, setMap] = React.useState(null)
-
+  console.log(map == True)
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
     map.fitBounds(bounds);
