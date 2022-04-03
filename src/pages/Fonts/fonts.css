@@ -8,6 +8,17 @@
  font-size: 20px;
  
 }
+.realtimeInput { 
+  width: 70%;
+  height: 80px;
+  margin: 20px;
+  
+} 
+
+.realtimeInput:focus {
+  background-color: #f28deb;
+  border: #3e363e;
+}
 
 .rooms-error-box {
   width: 100%;

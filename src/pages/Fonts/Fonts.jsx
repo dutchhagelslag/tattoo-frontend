@@ -21,7 +21,7 @@ render() {
     <div>
         <h1>Under construction pls ignore</h1>
 	  <div>
-	    Change name: <input type="text" value={this.state.text} onChange={this.handleChange} />
+	    Change name: <input className="realtimeInput" type="text" value={this.state.text} onChange={this.handleChange} />
 	  </div>
 	<p className="testFont" >{this.state.text} </p>
 	<p className="testFont">2</p>
