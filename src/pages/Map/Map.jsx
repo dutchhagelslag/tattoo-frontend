@@ -17,7 +17,8 @@ function MyComponent() {
     googleMapsApiKey: "AIzaSyAiuIYPo_PQ6UbF2nwnA9Ha08nEMuv8t5k"
   });
 
-  const [map_, setMap] = React.useState(null);
+  // eslint-disable-next-line
+  const [map, setMap] = React.useState(null);
   
   const onLoad = React.useCallback(function callback(map) {
     const bounds = new window.google.maps.LatLngBounds();
@@ -29,7 +30,6 @@ function MyComponent() {
       setMap(null);
   }, []);
 
-    console.log(map_); // hack to avoid linter will configure later
   return isLoaded ? (
       <GoogleMap
         mapContainerStyle={containerStyle}
