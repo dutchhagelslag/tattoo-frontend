@@ -1,40 +1,10 @@
-import React,{useEffect, useState } from 'react';
+import React,{useContext } from 'react';
 import Gallery from 'react-grid-gallery';
+import {GlobalData} from './../../global-data.js';
 
 function App() {
 
-    const [Data,setData] = useState([]);
-    
-    // api call
-    const url = "https://ta2h3nna.herokuapp.com/all_designs";
-    const options = {
-	method: "GET",
-	headers: {
-	    Accept: "application/json",
-	    "Content-Type": "application/json;charset=UTF-8",
-	}
-  };
-
-    const to_data = image => ({src: image.src, 
-			       thumbnail: image.src, 
-			       thumbnailWidth: parseInt(image.thumbnailWidth), 
-			       thumbnailHeight: parseInt(image.thumbnailHeight), 
-			       caption: image.caption});
-
-    useEffect(() => {
-        fetch(url, options)
-    	    .then(response => response.json())
-	    .then(response => JSON.parse(response))
-    	    .then(images => {
-    	        const test = images.map(to_data);
-    	        setData(test);
-    	        console.log(test);
-    	    })
-    	    .catch (err =>{
-    	        console.log(err);
-    	    });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+  const Data = useContext(GlobalData);
     
   return(
 	<div className="grid" > 	   

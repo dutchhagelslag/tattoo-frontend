@@ -1,5 +1,9 @@
-import React from 'react'; import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; import { Navbar, Nav, Container} from 'react-bootstrap'; 
+import React,{useEffect, useState } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'; 
+import { Navbar, Nav, Container} from 'react-bootstrap'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import {GlobalData} from './global-data.js';
 
 import Home from './pages/Home/Home';
 import Gallery from './pages/Gallery/Gallery';
@@ -10,8 +14,60 @@ import Map from './pages/Map/Map.jsx';
 
 import './App.css';
 
+const DataProvider = ({children}) => {
+    const [data,setData] = useState([]); // remove default when not testing
+    
+    // api call
+    const url = "https://ta2h3nna.herokuapp.com/all_designs";
+    const options = {
+	method: "GET",
+	headers: {
+	    Accept: "application/json",
+	    "Content-Type": "application/json;charset=UTF-8",
+	}
+    };
+
+    const to_data = image => ({src: image.src, 
+			       thumbnail: image.src, 
+			       thumbnailWidth: parseInt(image.thumbnailWidth), 
+			       thumbnailHeight: parseInt(image.thumbnailHeight), 
+			       caption: image.caption});
+
+    useEffect(() => {
+        fetch(url, options)
+    	    .then(response => response.json())
+	    .then(response => JSON.parse(response))
+    	    .then(images => {
+    	        const test = images.map(to_data);
+    	        setData(test);
+    	        console.log(test);
+    	    })
+    	    .catch (err =>{
+    	        console.log(err);
+    	    });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+   const { Provider } = GlobalData
+   return(
+       <Provider value={data}>
+           {children}
+       </Provider>
+   )
+}
+
 function App() {
+    
+
+    // 	<MyContext.Provider value={[
+    // {
+    //   image: "https://static.wixstatic.com/media/1900bd_7f207d128dc143748e00bf84925da3d1~mv2.jpeg/v1/fill/w_1242,h_1187,al_c,q_85,enc_auto/1900bd_7f207d128dc143748e00bf84925da3d1~mv2.jpeg",
+    //   caption: "Artist: Mikhail @MikhailAndersson"
+    // }]}>
+
+
   return (
+  <DataProvider> 
 	<>
 	<div className="Navbar">
 
@@ -57,6 +113,7 @@ function App() {
       </div>
     </div>
 	  </>
+	  </DataProvider>
   );
 }
 
