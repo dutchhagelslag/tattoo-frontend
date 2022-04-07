@@ -29,7 +29,7 @@ function MyComponent() {
       setMap(null);
   }, []);
 
-
+    console.log(map_); // hack to avoid linter will configure later
   return isLoaded ? (
       <GoogleMap
         mapContainerStyle={containerStyle}
