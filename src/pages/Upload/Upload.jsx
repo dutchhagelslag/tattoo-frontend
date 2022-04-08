@@ -1,5 +1,7 @@
-import React from 'react';
+
 import { Field, Form, Formik } from 'formik';
+import {GlobalData} from './../../global-data.js';
+import React,{useContext } from 'react';
 
 const SignupForm = () => {
   return (
@@ -46,6 +48,7 @@ const SignupForm = () => {
 
 
 function App() {
+  const Data = useContext(GlobalData);
 
   return (
       <div>{SignupForm()} </div>

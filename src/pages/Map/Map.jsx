@@ -1,5 +1,7 @@
-import React from 'react';
+
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import {GlobalData} from './../../global-data.js';
+import React,{useContext } from 'react';
 
 const containerStyle = {
   width: '400px',

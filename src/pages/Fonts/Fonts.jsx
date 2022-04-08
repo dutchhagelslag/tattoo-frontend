@@ -1,5 +1,7 @@
 import './fonts.css';
 import React, { Component } from 'react';
+import {useContext } from 'react';
+import {GlobalData} from './../../global-data.js';
 
 class App extends Component {
    constructor(props) {
@@ -38,6 +40,7 @@ export default App;
 
 /*
 function App() {
+ const Data = useContext(GlobalData);
  const data = [
     {
       image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",
