@@ -5,7 +5,7 @@ class App extends Component {
    constructor(props) {
       super(props);
 
-      this.state = { text: 'Start typing' };
+      this.state = { text: 'Loren Ipsum' };
 
       this.handleChange = this.handleChange.bind(this);
    } 
@@ -24,8 +24,8 @@ render() {
    		<input 
       
 	 		type="text" 
-	 		placeholder=" Start typing to see a preview of all of our fonts..."  
-	 		value={this.state.text} 
+	 		placeholder="Start typing to see a preview of all of our fonts..."  
+	 		//value={this.state.text} 
 	 		onChange={this.handleChange} />
 	</div>
 	 
