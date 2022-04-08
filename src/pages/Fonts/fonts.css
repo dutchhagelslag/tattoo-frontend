@@ -1,19 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lavishly+Yours&display=swap');
 
+.box { 
+  display: flex;  
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+}
+
+input[type="text"]{ 
+  font-size:24px;
+} 
+
+.pageTitle{
+  font-size: 50px;
+  font-family: 'Bebas Neue', cursive;
+  flex: 1 0 100%;
+  color: black;
+  
+}
 
 .testFont{ 
  font-family: 'Lavishly Yours', cursive;
- display: flex;
- align-items: flex-start;
- font-size: 20px;
  
+ font-size: 30px;
+ color: black;
+ background-color: white;
+ flex: 0 0 auto; 
+ margin-top: 10px;
+ flex-wrap: wrap;
 }
+
 .realtimeInput { 
-  width: 70%;
-  height: 80px;
-  margin: 20px;
-  
+  height: 40px;
+  flex: 0 0 100%;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 } 
+
+.realtimeInput input{ 
+  width: 100%;
+}
 
 .realtimeInput:focus {
   background-color: #f28deb;

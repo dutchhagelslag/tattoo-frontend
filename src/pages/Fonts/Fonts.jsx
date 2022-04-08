@@ -5,7 +5,7 @@ class App extends Component {
    constructor(props) {
       super(props);
 
-      this.state = { text: '' };
+      this.state = { text: 'Start typing' };
 
       this.handleChange = this.handleChange.bind(this);
    } 
@@ -18,14 +18,18 @@ class App extends Component {
 render() { 
  return(
 	 
-    <div>
-        <h1>Under construction pls ignore</h1>
-	  <div>
-	    Change name: <input className="realtimeInput" type="text" value={this.state.text} onChange={this.handleChange} />
-	  </div>
-	<p className="testFont" >{this.state.text} </p>
-	<p className="testFont">2</p>
-	<p className="testFont">3</p>
+    <div class="box">
+        <h1 className="pageTitle">Fonts gallery</h1>
+	<div className="realtimeInput" >
+   		<input 
+      
+	 		type="text" 
+	 		placeholder=" Start typing to see a preview of all of our fonts..."  
+	 		value={this.state.text} 
+	 		onChange={this.handleChange} />
+	</div>
+	 
+	<div className="testFont" >{this.state.text} </div>
     </div>
  );
 }
