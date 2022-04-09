@@ -1,6 +1,8 @@
 import './fonts.css';
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import {useContext } from 'react';
+// eslint-disable-next-line
 import {GlobalData} from './../../global-data.js';
 
 class App extends Component {

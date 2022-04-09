@@ -3,6 +3,7 @@ import {GlobalData} from './../../global-data.js';
 import React,{useContext } from 'react';
 
 function App() {
+// eslint-disable-next-line
   const Data = useContext(GlobalData);
     
   // api call for all design jsons

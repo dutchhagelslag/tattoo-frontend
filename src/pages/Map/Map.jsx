@@ -1,5 +1,8 @@
+// eslint-disable-next-line
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+// eslint-disable-next-line
 import {GlobalData} from './../../global-data.js';
+// eslint-disable-next-line
 import React,{useContext } from 'react';
 import { Component } from 'react';
 import {LoadScript } from '@react-google-maps/api';
