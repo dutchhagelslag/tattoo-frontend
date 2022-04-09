@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Bebas+Neue&family=Herr+Von+Muellerhoff&family=Lavishly+Yours&family=Monsieur+La+Doulaise&family=Six+Caps&family=Tangerine&display=swap');
 
 .box { 
   display: flex;  
@@ -18,16 +18,41 @@ input[type="text"]{
   
 }
 
-.testFont{ 
+.testFont { 
  font-family: 'Lavishly Yours', cursive;
- 
- font-size: 30px;
- color: black;
- background-color: white;
+ font-size: 50px;
+ color: white;
  flex: 0 0 auto; 
  margin-top: 10px;
- flex-wrap: wrap;
+ margin-right: 70px;
+ flex-wrap: nowrap;
 }
+
+#tf1 { 
+  font-family: 'Lavishly Yours', cursive;
+}
+
+#tf2 { 
+  font-family: 'Herr Von Muellerhoff', cursive;
+}
+
+#tf3 { 
+  font-family: 'Monsieur La Doulaise', cursive;
+}
+
+#tf4 { 
+  font-family: 'Six Caps', sans-serif;
+}
+
+#tf5 { 
+  font-family: 'Tangerine', cursive;
+}
+
+#tf6 { 
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+
 
 .realtimeInput { 
   height: 40px;

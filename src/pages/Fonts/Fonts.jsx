@@ -24,16 +24,19 @@ render() {
 	 
     <div class="box">
         <h1 className="pageTitle">Fonts gallery</h1>
-	<div className="realtimeInput" >
-   		<input 
-      
-	 		type="text" 
-	 		placeholder="Start typing to see a preview of all of our fonts..."  
-	 		//value={this.state.text} 
-	 		onChange={this.handleChange} />
-	</div>
-	 
-	<div className="testFont" >{this.state.text} </div>
+        <div className="realtimeInput" >
+          <input 
+            type="text" 
+            placeholder="Start typing to see a preview of all of our fonts..."   
+            onChange={this.handleChange} />
+        </div>
+        
+	      <div className="testFont" id="tf1">{this.state.text} </div>
+        <div className="testFont" id="tf2">{this.state.text} </div>
+        <div className="testFont" id="tf3">{this.state.text} </div>
+        <div className="testFont" id="tf4">{this.state.text} </div>
+        <div className="testFont" id="tf5">{this.state.text} </div>
+        <div className="testFont" id="tf6">{this.state.text} </div>
     </div>
  );
 }
