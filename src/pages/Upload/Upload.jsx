@@ -1,6 +1,47 @@
 import React from 'react';
 import { Field, Form, Formik } from 'formik';
 
+
+
+async function auth_backblaze(){
+    // api call
+    const url = "https://ta2h3nna.herokuapp.com/authorize_backblaze_access";
+
+    const options = {
+	method: "GET",
+	headers: {
+	    Accept: "application/json",
+	    "Content-Type": "application/json;charset=UTF-8",
+	}
+    };
+
+    // hardcoded index, should fix in future
+    const to_authData = auth => ({apiUrl: auth, 
+			          authorizationToken: auth.authorizationToken,
+			         });
+    
+    await fetch(url, options)
+    	  .then(response => response.json())
+
+    	  .then(response => {
+              const url = Object.values(response)[3];
+              const tok = Object.values(response)[4];
+              return [tok, url];
+                            })
+
+    	  // .then(response => {
+    	  //     console.log(response);
+    	  //   })
+
+    	  .catch (err =>{
+    	      console.log(err);
+    	  });
+
+
+    // return auth;
+};
+
+
 const SignupForm = () => {
   return (
     <>
@@ -19,7 +60,7 @@ const SignupForm = () => {
         }}
 
         onSubmit={(values, { setSubmitting }) => {
-            console.log(values.email); // make all the api calls
+            
         }}
       >
         <Form>
@@ -46,10 +87,9 @@ const SignupForm = () => {
 
 
 function App() {
-
-  return (
-      <div>{SignupForm()} </div>
-  );
+    return (
+        <div>{SignupForm()} </div>
+    );
 }
 
 export default App;
