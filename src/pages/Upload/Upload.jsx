@@ -1,5 +1,7 @@
-import React from 'react';
+
 import { Field, Form, Formik } from 'formik';
+import {GlobalData} from './../../global-data.js';
+import React,{useContext } from 'react';
 
 
 
@@ -87,9 +89,18 @@ const SignupForm = () => {
 
 
 function App() {
+<<<<<<< HEAD
     return (
         <div>{SignupForm()} </div>
     );
+=======
+  // eslint-disable-next-line
+  const Data = useContext(GlobalData);
+
+  return (
+      <div>{SignupForm()} </div>
+  );
+>>>>>>> 6680bec4517dd87a03463533fafe0620639efbe5
 }
 
 export default App;

@@ -1,11 +1,15 @@
 import './fonts.css';
 import React, { Component } from 'react';
+// eslint-disable-next-line
+import {useContext } from 'react';
+// eslint-disable-next-line
+import {GlobalData} from './../../global-data.js';
 
 class App extends Component {
    constructor(props) {
       super(props);
 
-      this.state = { text: '' };
+      this.state = { text: 'Loren Ipsum' };
 
       this.handleChange = this.handleChange.bind(this);
    } 
@@ -18,14 +22,21 @@ class App extends Component {
 render() { 
  return(
 	 
-    <div>
-        <h1>Under construction pls ignore</h1>
-	  <div>
-	    Change name: <input className="realtimeInput" type="text" value={this.state.text} onChange={this.handleChange} />
-	  </div>
-	<p className="testFont" >{this.state.text} </p>
-	<p className="testFont">2</p>
-	<p className="testFont">3</p>
+    <div class="box">
+        <h1 className="pageTitle">Fonts gallery</h1>
+        <div className="realtimeInput" >
+          <input 
+            type="text" 
+            placeholder="Start typing to see a preview of all of our fonts..."   
+            onChange={this.handleChange} />
+        </div>
+        
+	      <div className="testFont" id="tf1">{this.state.text} </div>
+        <div className="testFont" id="tf2">{this.state.text} </div>
+        <div className="testFont" id="tf3">{this.state.text} </div>
+        <div className="testFont" id="tf4">{this.state.text} </div>
+        <div className="testFont" id="tf5">{this.state.text} </div>
+        <div className="testFont" id="tf6">{this.state.text} </div>
     </div>
  );
 }
@@ -34,6 +45,7 @@ export default App;
 
 /*
 function App() {
+ const Data = useContext(GlobalData);
  const data = [
     {
       image: "https://www.designworkplan.com/media/pages/read/arial-is-everywhere/0c09943d44-1617288500/arial_header_930x530-01.png",

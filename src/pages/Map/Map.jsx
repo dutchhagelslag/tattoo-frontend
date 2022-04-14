@@ -1,47 +1,41 @@
-import React from 'react';
+// eslint-disable-next-line
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+// eslint-disable-next-line
+import {GlobalData} from './../../global-data.js';
+// eslint-disable-next-line
+import React,{useContext } from 'react';
+import { Component } from 'react';
+import {LoadScript } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '400px',
-  height: '400px'
+  width: '1960px',
+  height: '1080px'
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: 40.69452,
+  lng:-73.98650
 };
 
-function MyComponent() {
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyAiuIYPo_PQ6UbF2nwnA9Ha08nEMuv8t5k"
-  });
-
-  // eslint-disable-next-line
-  const [map, setMap] = React.useState(null);
-  
-  const onLoad = React.useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-      setMap(map);
-  }, []);
-
-  const onUnmount = React.useCallback(function callback(map) {
-      setMap(null);
-  }, []);
-
-  return isLoaded ? (
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
+class MyComponents extends Component {
+  render() {
+    return (
+      <LoadScript
+        googleMapsApiKey="AIzaSyAiuIYPo_PQ6UbF2nwnA9Ha08nEMuv8t5k"
       >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
-      </GoogleMap>
-  ) : <></>;
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={10}
+        >
+          { /* Child components, such as markers, info windows, etc. */ }
+          <></>
+        </GoogleMap>
+      </LoadScript>
+    )
+  }
 }
+export default React.memo(MyComponents);
 
-export default React.memo(MyComponent);
+
+

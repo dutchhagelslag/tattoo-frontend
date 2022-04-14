@@ -1,5 +1,7 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+// eslint-disable-next-line
+import {GlobalData} from './../../global-data.js';
 
 export default function Home(){
   const history = useHistory();
