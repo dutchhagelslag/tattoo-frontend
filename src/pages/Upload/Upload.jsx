@@ -1,15 +1,14 @@
-
 import { Field, Form, Formik } from 'formik';
-import {GlobalData} from './../../global-data.js';
-import React,{useContext } from 'react';
+
+async function auth_upload_api_calls(){
+    // calls the required apis for authorization
+    // synchronously as we need info 
 
 
+    // 1st api call: for token and entry url
+    const api_token_url = "https://ta2h3nna.herokuapp.com/authorize_backblaze_access";
 
-async function auth_backblaze(){
-    // api call
-    const url = "https://ta2h3nna.herokuapp.com/authorize_backblaze_access";
-
-    const options = {
+    const api_token_options = {
 	method: "GET",
 	headers: {
 	    Accept: "application/json",
@@ -17,31 +16,80 @@ async function auth_backblaze(){
 	}
     };
 
-    // hardcoded index, should fix in future
-    const to_authData = auth => ({apiUrl: auth, 
-			          authorizationToken: auth.authorizationToken,
-			         });
-    
-    await fetch(url, options)
+    // eslint-disable-next-line
+    const token_entry = await fetch(api_token_url, api_token_options)
     	  .then(response => response.json())
-
     	  .then(response => {
               const url = Object.values(response)[3];
               const tok = Object.values(response)[4];
-              return [tok, url];
-                            })
+              return [url, tok];
+          });
 
-    	  // .then(response => {
-    	  //     console.log(response);
-    	  //   })
+    
+    // // 2nd api call: for backblaze upload url 
+    // const api_upload_url = token_entry[0];
+    // const api_token = token_entry[1];
+    // // eslint-disable-next-line
+    // const bucket_id = "8d5894f45da9ef2674e90913"; // hardcoded to ta2h3nna bucket will change
 
-    	  .catch (err =>{
-    	      console.log(err);
-    	  });
+    // const api_upload_options = {
+    // 	method: "GET",
+    // 	headers: {
+    // 	    Accept: "application/json",
+    //         "Authorization": api_token,
+    // 	    "Content-Type": "application/json;charset=UTF-8",
+    // 	}
+    // };
+
+    // const upload_url = await fetch(api_upload_url, api_upload_options)
+    // 	  .then(response => response.json())
+    // 	  .then(response => {
+    //           const tok = Object.values(response)[4];
+    //           return [tok];
+    //       });
+    
 
 
-    // return auth;
-};
+
+    // 3rd api call: upload image
+    // const upload_img_url = "https://ta2h3nna.herokuapp.com/authorize_backblaze_access";
+
+    // const api_token_options = {
+    // 	method: "GET",
+    // 	headers: {
+    // 	    Accept: "application/json",
+    // 	    "Content-Type": "application/json;charset=UTF-8",
+    // 	}
+    // };
+
+    // const token_entry = await fetch(api_token_url, api_token_options)
+    // 	  .then(response => response.json())
+    // 	  .then(response => {
+    //           const url = Object.values(response)[3];
+    //           const tok = Object.values(response)[4];
+    //           return [url, tok];
+    //       });
+
+
+    // 4th api setup: upload image meta data to mongo through ta2henna backend
+    // const upload_meta_url = "https:ta2h3nna.herokuapp.com/upload_design";
+
+    // const api_token_options = {
+    // 	method: "PUT",
+    // 	headers: {
+    // 	    Accept: "application/json",
+    // 	    "Content-Type": "application/json;charset=UTF-8",
+    // 	}
+    // };
+
+    // const token_entry = await fetch(api_token_url, api_token_options)
+    // 	  .then(response => response.json())
+    // 	  .then(response => {
+    //           const url = Object.values(response)[3];
+    //           const tok = Object.values(response)[4];
+    //           return [url, tok];
+    //       });
+}
 
 
 const SignupForm = () => {
@@ -89,18 +137,12 @@ const SignupForm = () => {
 
 
 function App() {
-<<<<<<< HEAD
+  // eslint-disable-next-line
+    auth_upload_api_calls();
+
     return (
         <div>{SignupForm()} </div>
     );
-=======
-  // eslint-disable-next-line
-  const Data = useContext(GlobalData);
-
-  return (
-      <div>{SignupForm()} </div>
-  );
->>>>>>> 6680bec4517dd87a03463533fafe0620639efbe5
 }
 
 export default App;
