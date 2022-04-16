@@ -1,0 +1,24 @@
+.home-content { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-button {
+    min-width: 300px;
+    max-width: 400px;
+    border: 1px solid #94A3B8;
+    background-color: #E2E8F0;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+
+.page-button:hover {
+  background-color: #CBD5E1;
+}
