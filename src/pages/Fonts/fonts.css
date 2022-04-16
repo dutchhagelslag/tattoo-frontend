@@ -13,7 +13,7 @@ input[type="text"]{
 .pageTitle{
   font-size: 50px;
   font-family: 'Bebas Neue', cursive;
-  flex: 1 0 100%;
+  flex: 0 0 100%;
   color: black;
   
 }
@@ -51,8 +51,6 @@ input[type="text"]{
 #tf6 { 
   font-family: 'Alegreya Sans SC', sans-serif;
 }
-
-
 
 .realtimeInput { 
   height: 40px;

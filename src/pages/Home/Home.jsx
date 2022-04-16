@@ -1,4 +1,5 @@
 import React from 'react';
+import './home.css';
 import {useHistory} from 'react-router-dom';
 // eslint-disable-next-line
 import {GlobalData} from './../../global-data.js';
@@ -11,7 +12,7 @@ export default function Home(){
   }
 
   return (
-    <div className="content">
+    <div className="home-content">
 
      <button
         onClick={() => navigateToPage('/gallery')}
