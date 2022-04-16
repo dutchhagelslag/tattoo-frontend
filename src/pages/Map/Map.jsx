@@ -1,41 +1,22 @@
-// eslint-disable-next-line
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-// eslint-disable-next-line
-import {GlobalData} from './../../global-data.js';
-// eslint-disable-next-line
-import React,{useContext } from 'react';
-import { Component } from 'react';
-import {LoadScript } from '@react-google-maps/api';
+import React from "react";
+import {
+    GoogleMap, 
+    useLoadScript,
+    Marker,
+    InfoWindow,
+} from "@react-google-maps/api";
 
-const containerStyle = {
-  width: '1960px',
-  height: '1080px'
-};
+import "@reach/combobox/styles.css";
 
-const center = {
-  lat: 40.69452,
-  lng:-73.98650
-};
+const libraries = ["places"];
 
-class MyComponents extends Component {
-  render() {
-    return (
-      <LoadScript
-        googleMapsApiKey="AIzaSyAiuIYPo_PQ6UbF2nwnA9Ha08nEMuv8t5k"
-      >
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={10}
-        >
-          { /* Child components, such as markers, info windows, etc. */ }
-          <></>
-        </GoogleMap>
-      </LoadScript>
-    )
-  }
+export default function App() {
+    const {isLoaded, loadError} = useLoadScript({
+        googleMapsApiKey: process.env.REACT_APPGOOGLE_MAPS_API_KEY,
+        libraries,
+    });
+
+    if (loadError) return "Error loading maps";
+    if (!isLoaded) return "Loading Maps";
+    return <div>map</div>;
 }
-export default React.memo(MyComponents);
-
-
-
