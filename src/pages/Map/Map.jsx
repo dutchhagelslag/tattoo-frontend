@@ -33,6 +33,7 @@ export default function App() {
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries,
     });
+    const [marks, setMarkers] = React.useState([]);
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
@@ -49,6 +50,16 @@ export default function App() {
                 zoom = {15} 
                 center = {center}
                 options={options}
+                onClick={(event) => {
+                    setMarkers((current) => [
+                        ...current, 
+                        {
+                            lat: event.latLng.lat(),
+                            lng: event.latLng.lng(),
+                            time: new Date(),
+                        },
+                    ]);
+                }}
             ></GoogleMap>
         </div>
     );
