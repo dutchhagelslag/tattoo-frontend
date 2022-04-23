@@ -30,7 +30,7 @@ const options= {
 
 export default function App() {
     const {isLoaded, loadError} = useLoadScript({
-        googleMapsApiKey: process.env.REACT_APPGOOGLE_MAPS_API_KEY,
+        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries,
     });
 
@@ -38,12 +38,12 @@ export default function App() {
     if (!isLoaded) return "Loading Maps";
     return ( 
         <div>
-            <h2>
+            <h1>
                 Parlors{" "}
                 <span role= "img" aria-label = "Cool">
                     👌
                 </span>
-            </h2>
+            </h1>
             <GoogleMap 
                 mapContainerStyle = {mapContainerStyle} 
                 zoom = {15} 
