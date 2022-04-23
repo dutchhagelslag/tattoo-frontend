@@ -1,6 +1,7 @@
 import { Carousel } from 'react-carousel-minimal';
 import {GlobalData} from './../../global-data.js';
 import React,{useContext } from 'react';
+import './gallery.css';
 
 function App() {
 // eslint-disable-next-line
@@ -73,19 +74,17 @@ function App() {
   return (
     <div className="App">
       <div style={{ textAlign: "center" }}>
-        <h1>TATTOO COLLECTION</h1>
-        <h1 style={{ color: 'White' }}>Browse for your favorite tattoo genre and artist name</h1>
-        <a href="https://www.firstclasstattoos.com">Visit Tattoo Parlor</a>
+        <h1 className="titleGallery">Browse our collection of artists to find your next tattoo</h1>
+        <a className="parlorTitle" href="https://www.firstclasstattoos.com">Visit Tattoo Parlor</a>
         <div style={{
           padding: "0 0"
         }}>
           <Carousel
             data={data}
             time={20000}
-	    height="700px"
-            width="1000x"
+            
             captionStyle={captionStyle}
-            radius="10px"
+            radius="5px"
             captionPosition="bottom"
             automatic={true}
             dots={true}
@@ -96,8 +95,7 @@ function App() {
             slideImageFit="contain"
 	    variant="dark" 
             thumbnails={true}
-            thumbnailWidth="100px"
-            className="carousel"
+            thumbnailWidth="60px"
 
 	  
           />
