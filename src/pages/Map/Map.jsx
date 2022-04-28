@@ -36,6 +36,9 @@ export default function App() {
         libraries,
     });
     const [markers, setMarkers] = React.useState([]);
+    const [selected, setSelected] = React.useState(null);    
+
+
     const onMapClick = React.useCallback((e) => {
         setMarkers((current) => [
             ...current,
@@ -46,6 +49,7 @@ export default function App() {
             },
         ]);
     }, []);
+    
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
@@ -70,6 +74,12 @@ export default function App() {
                         position={{ lat: marker.lat, lng: marker.lng }}
                         onClick={() => {
                             setSelected(marker);
+                        }}
+                        icon={{
+                            url: `/mph.png`,
+                            origin: new window.google.maps.Point(0, 0),
+                            anchor: new window.google.maps.Point(15, 15),
+                            scaledSize: new window.google.maps.Size(30, 30),
                         }}
                     />
                 ))}    
