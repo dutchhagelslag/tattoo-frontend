@@ -28,12 +28,24 @@ const options= {
 };
 
 
+
+
 export default function App() {
     const {isLoaded, loadError} = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
         libraries,
     });
-    const [marks, setMarkers] = React.useState([]);
+    const [markers, setMarkers] = React.useState([]);
+    const onMapClick = React.useCallback((e) => {
+        setMarkers((current) => [
+            ...current,
+            {
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng(),
+                time: new Date(),
+            },
+        ]);
+    }, []);
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
@@ -50,17 +62,18 @@ export default function App() {
                 zoom = {15} 
                 center = {center}
                 options={options}
-                onClick={(event) => {
-                    setMarkers((current) => [
-                        ...current, 
-                        {
-                            lat: event.latLng.lat(),
-                            lng: event.latLng.lng(),
-                            time: new Date(),
-                        },
-                    ]);
-                }}
-            ></GoogleMap>
+                onClick={onMapClick}
+            >
+                {markers.map((marker) => (
+                    <Marker
+                        key={`${marker.lat}-${marker.lng}`}
+                        position={{ lat: marker.lat, lng: marker.lng }}
+                        onClick={() => {
+                            setSelected(marker);
+                        }}
+                    />
+                ))}    
+            </GoogleMap>
         </div>
     );
 }
