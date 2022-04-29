@@ -2,7 +2,7 @@
 
 .box { 
   display: flex;  
-  flex: 1 0 100%;
+  flex: 0 0 auto;
   flex-wrap: wrap;
 }
 
@@ -13,9 +13,10 @@ input[type="text"]{
 .pageTitle{
   font-size: 50px;
   font-family: 'Bebas Neue', cursive;
-  flex: 0 0 100%;
+  flex: 0 0 auto;
   color: black;
-  
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .testFont { 
@@ -26,6 +27,7 @@ input[type="text"]{
  margin-top: 10px;
  margin-right: 70px;
  flex-wrap: nowrap;
+ border: white;
 }
 
 #tf1 { 
@@ -56,16 +58,17 @@ input[type="text"]{
   height: 40px;
   flex: 0 0 100%;
   margin-bottom: 30px;
-  flex-wrap: wrap;
+  align-self: flex-start;
+  
 } 
 
 .realtimeInput input{ 
   width: 100%;
 }
 
-.realtimeInput:focus {
+input:focus {
   background-color: #f28deb;
-  border: #3e363e;
+  border: medium grooved green;
 }
 
 .rooms-error-box {
