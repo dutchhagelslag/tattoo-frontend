@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  flex-basis:auto;
   background-color: #3c4957;
 }
 

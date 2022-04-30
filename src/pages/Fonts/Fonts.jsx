@@ -9,7 +9,7 @@ class App extends Component {
    constructor(props) {
       super(props);
 
-      this.state = { text: 'Loren Ipsum' };
+      this.state = { text: 'Lorem Ipsum' };
 
       this.handleChange = this.handleChange.bind(this);
    } 
@@ -30,72 +30,73 @@ render() {
             placeholder="Start typing to see a preview of all of our fonts..."   
             onChange={this.handleChange} />
         </div>
-        
-	      <div className="testFont" >
-          <div className="fontName">Lavishly Yours</div>
-          <div id="tf1" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Herr Von Muellerhoff</div>
-          <div id="tf2" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Six Caps</div>
-          <div id="tf4" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Tangerine</div>
-          <div id="tf5" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Alegreya Sans SC</div>
-          <div id="tf6" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
-        <div className="testFont" >
-          <div className="fontName">Monsieur La Doulaise</div>
-          <div id="tf3" className="fontChild">{this.state.text}</div>
-        </div>
 
+        <div className="fontScroll">
+          <div className="testFont" >
+            <div className="fontName">Lavishly Yours</div>
+            <div id="tf1" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Herr Von Muellerhoff</div>
+            <div id="tf2" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Six Caps</div>
+            <div id="tf4" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Tangerine</div>
+            <div id="tf5" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Alegreya Sans SC</div>
+            <div id="tf6" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+          <div className="testFont" >
+            <div className="fontName">Monsieur La Doulaise</div>
+            <div id="tf3" className="fontChild">{this.state.text}</div>
+          </div>
+        </div> 
 
 
 
