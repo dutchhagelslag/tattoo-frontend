@@ -20,14 +20,17 @@ input[type="text"]{
 }
 
 .testFont { 
- font-family: 'Lavishly Yours', cursive;
+  box-sizing: border-box;
+  width: calc(33.3333333333% - 16px);
+  font-family: 'Lavishly Yours', cursive;
  font-size: 50px;
  color: white;
  flex: 0 0 auto; 
  margin-top: 10px;
- margin-right: 70px;
+ margin-right: 16px;
  flex-wrap: nowrap;
- border: white;
+ border: solid rgb(255, 255, 255) 5px;
+ padding: 10px;
 }
 
 #tf1 { 
@@ -59,16 +62,11 @@ input[type="text"]{
   flex: 0 0 100%;
   margin-bottom: 30px;
   align-self: flex-start;
-  
+  border: medium white;
 } 
 
 .realtimeInput input{ 
   width: 100%;
-}
-
-input:focus {
-  background-color: #f28deb;
-  border: medium grooved green;
 }
 
 .rooms-error-box {
