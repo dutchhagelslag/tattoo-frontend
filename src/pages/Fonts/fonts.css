@@ -13,7 +13,9 @@
 .fontName { 
   font-family:Arial, Helvetica, sans-serif;
   font-size: 17px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-left: 5px;
 }
 
 .fontScroll{ 
@@ -44,11 +46,12 @@ input[type="text"]{
  font-size: 50px;
  color: white;
  flex: 0 0 auto; 
- margin-top: 10px;
+ margin-top: 16px;
  margin-right: 16px;
  flex-wrap: wrap;
- border: solid rgb(255, 255, 255) 5px;
+ border: solid rgb(255, 255, 255) 2px;
  padding: 10px;
+ border-radius: 7px;
 }
 
 #tf1 { 
