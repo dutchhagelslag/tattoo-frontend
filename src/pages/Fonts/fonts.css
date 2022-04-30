@@ -6,6 +6,16 @@
   flex-wrap: wrap;
 }
 
+.fontChild{ 
+  padding-left: 12px;
+}
+
+.fontName { 
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+
 input[type="text"]{ 
   font-size:24px;
 } 
@@ -22,7 +32,7 @@ input[type="text"]{
 .testFont { 
   box-sizing: border-box;
   width: calc(33.3333333333% - 16px);
-  font-family: 'Lavishly Yours', cursive;
+
  font-size: 50px;
  color: white;
  flex: 0 0 auto; 
@@ -67,6 +77,7 @@ input[type="text"]{
 
 .realtimeInput input{ 
   width: 100%;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .rooms-error-box {
