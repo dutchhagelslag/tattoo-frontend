@@ -8,6 +8,7 @@
 
 .fontChild{ 
   padding-left: 12px;
+  overflow: hidden;
 }
 
 .fontName { 
@@ -35,7 +36,7 @@ input[type="text"]{
   font-family: 'Bebas Neue', cursive;
   flex: 0 0 auto;
   color: black;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 30px;
 }
 
@@ -79,7 +80,7 @@ input[type="text"]{
 }
 
 .realtimeInput { 
-  height: 40px;
+  height: 50px;
   flex: 0 0 100%;
   margin-bottom: 30px;
   align-self: flex-start;
@@ -89,6 +90,10 @@ input[type="text"]{
 .realtimeInput input{ 
   width: 100%;
   font-family:Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: none;
+  height: 50px;
+  padding-left: 10px;
 }
 
 .rooms-error-box {
