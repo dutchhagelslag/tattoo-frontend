@@ -1,99 +1,38 @@
 import { Field, Form, Formik } from 'formik';
 
-async function auth_upload_api_calls(){
-    // calls the required apis for authorization
-    // synchronously as we need info 
 
-    // 1st api call: for token and entry url
-    const api_token_url = "https://ta2h3nna.herokuapp.com/authorize_backblaze_access";
+        
+        // # design = {
+        // #     "name" : 
+        // #     "artist" : 
+        // #     "genre" : 
+        // #     "cost" : 
+        // #     "caption" 
+        // #     "src" : 
+        // #     "thumbnailHeight" :
+        // #     "thumbnailWidth" :
+        // # }        
 
-    const api_token_options = {
-	method: "GET",
+
+
+function upload_metadata(values){
+    const url = "https://ta2h3nna.herokuapp.com/design/put";
+    const options = {
+	method: "PUT",
 	headers: {
 	    Accept: "application/json",
-	    "Content-Type": "application/json;charset=UTF-8",
-	}
+            'Content-Type': 'application/json',
+	    // "Content-Type": "application/json;charset=UTF-8",
+	},
+        body: JSON.stringify(values)
     };
 
-    // eslint-disable-next-line
-    const token_entry = await fetch(api_token_url, api_token_options)
-    	  .then(response => response.json())
-    	  .then(response => {
-              const url = Object.values(response)[3];
-              const tok = Object.values(response)[4];
-              console.log([url, tok]);
-              return [url, tok];
-          });
-
-    
-    // 2nd api call: for backblaze upload url 
-    const api_upload_url = token_entry[0];
-    const api_token = token_entry[1];
-
-
-    // hardcoded to ta2h3nna bucket will change
-    // const bucket_id = "8d5894f45da9ef2674e90913"; 
-
-    const api_upload_options = {
-    	method: "GET",
-    	headers: {
-    	    Accept: "application/json",
-            'Authorization': api_token,
-    	    'Content-Type': "application/json;charset=UTF-8",
-            
-    	}
-    };
-
-    // eslint-disable-next-line
-    const upload_url = await fetch(api_upload_url, api_upload_options)
-    	  .then(response => response.json())
-    	  .then(response => {
-              console.log(response);
-          });
- 
-
-    // 3rd api call: upload image
-    // const upload_img_url = "https://ta2h3nna.herokuapp.com/authorize_backblaze_access";
-
-    // const api_token_options = {
-    // 	method: "GET",
-    // 	headers: {
-    // 	    Accept: "application/json",
-    // 	    "Content-Type": "application/json;charset=UTF-8",
-    // 	}
-    // };
-
-    // const token_entry = await fetch(api_token_url, api_token_options)
-    // 	  .then(response => response.json())
-    // 	  .then(response => {
-    //           const url = Object.values(response)[3];
-    //           const tok = Object.values(response)[4];
-    //           return [url, tok];
-    //       });
-
-
-    // 4th api setup: upload image meta data to mongo through ta2henna backend
-    // const upload_meta_url = "https:ta2h3nna.herokuapp.com/upload_design";
-
-    // const api_token_options = {
-    // 	method: "PUT",
-    // 	headers: {
-    // 	    Accept: "application/json",
-    // 	    "Content-Type": "application/json;charset=UTF-8",
-    // 	}
-    // };
-
-    // const token_entry = await fetch(api_token_url, api_token_options)
-    // 	  .then(response => response.json())
-    // 	  .then(response => {
-    //           const url = Object.values(response)[3];
-    //           const tok = Object.values(response)[4];
-    //           return [url, tok];
-    //       });
+    fetch(url, options)
+    	.catch (err =>{
+    	    console.log(err);
+    	});
 }
 
-
-// add validation schema for signup form
 
 const SignupForm = () => {
   return (
@@ -114,6 +53,8 @@ const SignupForm = () => {
 
         onSubmit={(values, { setSubmitting }) => {
             // do api call here with values
+            // console.log(values);
+            upload_metadata(values);
         }}
       >
         <Form>
@@ -142,9 +83,6 @@ const SignupForm = () => {
 
 
 function App() {
-  // eslint-disable-next-line
-    auth_upload_api_calls();
-
     return (
         <div>{SignupForm()} </div>
     );

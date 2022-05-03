@@ -34,7 +34,7 @@ const DataProvider = ({children}) => {
 			       caption: image.caption});
 
     useEffect(() => {
-		document.title = "TA2H3NNA"
+	document.title = "TA2H3NNA"
         fetch(url, options)
     	    .then(response => response.json())
 	    .then(response => JSON.parse(response))
