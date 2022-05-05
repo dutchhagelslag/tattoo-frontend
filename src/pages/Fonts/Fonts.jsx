@@ -22,7 +22,7 @@ class App extends Component {
 render() { 
  return(
 	 
-    <div className="box">
+    <div className="boxfonts">
         <h1 className="pageTitle">Fonts gallery</h1>
         <div className="realtimeInput" >
           <input 
