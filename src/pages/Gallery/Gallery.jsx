@@ -73,12 +73,12 @@ function App() {
 
   return (
     <div className="containerOuter">
-      <div className="pageTitle">
+      <div className="mainTitle">
         <h1 className="titleGallery">Browse our collection of artists to find your next tattoo</h1>
         <a className="parlorTitle" href="https://www.firstclasstattoos.com">Visit Tattoo Parlor</a>
       </div>
 
-      <div className="carouselContainer" >
+      <div className="carouselOuter" >
           <Carousel
             className = "Carousel"
             data={data}

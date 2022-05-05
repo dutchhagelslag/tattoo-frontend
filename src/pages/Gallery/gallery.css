@@ -2,15 +2,18 @@
   display: flex;
   flex: 0 0 100%;
   flex-wrap: wrap;
-
+  justify-content: center;
 }
 
-.pageTitle{
+.mainTitle{
+  display: flex;
+  flex-wrap: wrap;
   flex: 0 0 100%;
   margin-top: 30px;
   min-width: 100%;
   max-height: 100px;
   margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .titleGallery { 
@@ -28,9 +31,12 @@
 }
 
 
-.carouselContainer { 
+.carouselOuter { 
   display: flex;
   flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
 }
 
 .Carousel {
@@ -41,11 +47,13 @@
 
 .box { 
   margin: 0px;
+  max-width: 100vh;
+  justify-content: center;
 }
 
 .carousel-container { 
-  width: 80vh; 
-  height: 100px;
+  width: 1000px;
+  max-width: 1000px;
   flex: 0 0 100%;
   display: flex;
   flex-wrap: wrap;
@@ -53,4 +61,5 @@
 .thumbnails { 
   overflow-y: hidden;
   flex: 0 0 auto;
+  height: 100px;
 }
