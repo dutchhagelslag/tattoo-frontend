@@ -1,58 +1,56 @@
-.user-item  {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
+.containerOuter { 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+
 }
 
-Carousel {
-  justify-content:center;
-  display: flex;
-  flex: 0 0 auto;
-  height: 50%;
-  max-height: 50%;
-  width: 80%;
-  max-width: 80%;
-  min-width: 80%;
+.pageTitle{
+  flex: 0 0 100%;
+  margin-top: 30px;
+  min-width: 100%;
+  max-height: 100px;
+  margin-bottom: 0px;
 }
 
-.create-modal {
-  position: absolute;
-  z-index: 1000;
-  width: 400px;
-  height: 200px;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid gray;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.titleGallery { 
+  font-size: 40px;
+  font-family: 'Bebas Neue', cursive;
+  flex: 0 0 100%;
+  color: black;
 }
 
-.create-actions {
-  display: flex;
-  gap: 10px;
-}
 .parlorTitle{ 
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Bebas Neue', cursive;
   flex: 0 0 100%;
   color: rgb(48, 48, 48);
 }
-.user-input {
-  width: 100%;
-  padding: 5px;
+
+
+.carouselContainer { 
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.titleGallery { 
-  font-size: 30px;
-  font-family: 'Bebas Neue', cursive;
+.Carousel {
+  justify-content:center;
+  display: flex;
   flex: 0 0 100%;
-  color: black;
+}
+
+.box { 
+  margin: 0px;
+}
+
+.carousel-container { 
+  width: 80vh; 
+  height: 100px;
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnails { 
+  overflow-y: hidden;
+  flex: 0 0 auto;
 }

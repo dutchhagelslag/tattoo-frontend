@@ -72,35 +72,33 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div style={{ textAlign: "center" }}>
+    <div className="containerOuter">
+      <div className="pageTitle">
         <h1 className="titleGallery">Browse our collection of artists to find your next tattoo</h1>
         <a className="parlorTitle" href="https://www.firstclasstattoos.com">Visit Tattoo Parlor</a>
-        <div style={{
-          padding: "0 0"
-        }}>
+      </div>
+
+      <div className="carouselContainer" >
           <Carousel
+            className = "Carousel"
             data={data}
             time={20000}
-            
             captionStyle={captionStyle}
             radius="5px"
             captionPosition="bottom"
             automatic={true}
             dots={true}
-	    pause="hover"
+	          pause="hover"
             slideNumberStyle={slideNumberStyle}  
             pauseIconSize="40px"
             slideBackgroundColor="black"
             slideImageFit="contain"
-	    variant="dark" 
+	          variant="dark" 
             thumbnails={true}
             thumbnailWidth="60px"
-
-	  
           />
         </div>
-      </div>
+      
     </div>
   );
 }
