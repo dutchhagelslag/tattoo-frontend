@@ -1,5 +1,5 @@
 import { Field, Form, Formik } from 'formik';
-
+import './upload.css';
 
         
         // # design = {
@@ -37,7 +37,7 @@ function upload_metadata(values){
 const SignupForm = () => {
   return (
     <>
-      <h1 style={{color: 'White'}}>Upload Tattoo</h1>
+      <h1 className="uploadPageTitle" >Upload Tattoo</h1>
       <Formik
 
         initialValues={{

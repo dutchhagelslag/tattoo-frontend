@@ -45,3 +45,11 @@
   width: 100%;
   padding: 5px;
 }
+
+.uploadPageTitle { 
+  font-size: 40px;
+  font-family: 'Bebas Neue', cursive;
+  color: black;
+  margin-bottom: 30px;
+}
+
