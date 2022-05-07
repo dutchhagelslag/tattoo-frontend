@@ -7,6 +7,7 @@ import {
     InfoWindow,
 } from "@react-google-maps/api";
 
+import { formatRelative } from "date-fns";
 import "@reach/combobox/styles.css";
 import mapStyles from "./mapStyles";
 
@@ -86,8 +87,19 @@ export default function App() {
                             anchor: new window.google.maps.Point(15, 15),
                             scaledSize: new window.google.maps.Size(30, 30),
                         }}
+			onClick={() => {
+			    setSelected(marker);
+			}}
                     />
-                ))}    
+                ))}
+	        {selected ? (
+		    <InfoWindow position={{lat: selected.lat, lng: selected.lng}} >
+		        <div>
+			    <h2>Awesome Tattoo Parlor!</h2>
+			    <p>Spotted {formatRelative(selected.time, new Date())}</p>
+		        </div>
+		    </InfoWindow>
+		) : null}    
             </GoogleMap>
         </div>
     );
