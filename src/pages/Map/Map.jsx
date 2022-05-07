@@ -49,7 +49,11 @@ export default function App() {
             },
         ]);
     }, []);
-    
+
+    const mapRef = React.useRef();
+    const onMapLoad = React.useCallback((map) => {
+        mapRef.current = map;
+    },[]);    
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
@@ -67,6 +71,7 @@ export default function App() {
                 center = {center}
                 options={options}
                 onClick={onMapClick}
+                onLoad={onMapLoad}
             >
                 {markers.map((marker) => (
                     <Marker
@@ -76,7 +81,7 @@ export default function App() {
                             setSelected(marker);
                         }}
                         icon={{
-                            url: `/mph.png`,
+                            url: `/Comet.svg`,
                             origin: new window.google.maps.Point(0, 0),
                             anchor: new window.google.maps.Point(15, 15),
                             scaledSize: new window.google.maps.Size(30, 30),
