@@ -60,7 +60,12 @@ export default function App() {
     const mapRef = React.useRef();
     const onMapLoad = React.useCallback((map) => {
         mapRef.current = map;
-    },[]);    
+    },[]);   
+
+    const panTo = React.useCallback(({lat, lng}) => {
+	mapRef.current.panTo({lat,lng});
+	mapRef.current.setZoom(18);
+    }, []); 
 
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading Maps";
@@ -72,7 +77,7 @@ export default function App() {
                     👌
                 </span>
             </h1>
-	    <Search />
+	    <Search panTo={panTo} />
             <GoogleMap 
                 mapContainerStyle = {mapContainerStyle} 
                 zoom = {15} 
@@ -112,8 +117,8 @@ export default function App() {
     );
 }
 
-function Search() {
-    const {ready, value, suggestions: {status, data}, setValue, clearSuggestion} = usePlacesAutocomplete({
+function Search({ panTo }) {
+    const {ready, value, suggestions: {status, data}, setValue, clearSuggestions} = usePlacesAutocomplete({
 	requestOptions:{
             location: {lat: () => 40.69452,lng:() => -73.98650 },
 	    radius: 200 * 1000, 
@@ -122,8 +127,18 @@ function Search() {
     return (
 	<div className="search">
 	    <Combobox 
-	        onSelect = {(address) =>{
-		    console.log(address);
+	        onSelect = {async (address) =>{
+		    setValue(address, false);
+		    clearSuggestions();
+		    try{
+			const results = await getGeocode({address});
+			const { lat, lng } = await getLatLng(results[0]);
+			panTo({ lat, lng });
+			console.log(results[0]);
+		    } catch(error){
+			console.log("error!")
+		    }
+		    
 	        }}
 	    >
 	        <ComboboxInput 
@@ -134,6 +149,14 @@ function Search() {
 	            disabled={!ready}
 		    placeholder = "Enter an address"
                 />
+		<ComboboxPopover>
+		    <ComboboxList>
+			{status === "OK" && 
+			    data.map(({id, description}) =>( 
+			        <ComboboxOption key={id} value={description} />
+			    ))}
+		    </ComboboxList>
+		</ComboboxPopover>
 	    </Combobox>
         </div>
     );
