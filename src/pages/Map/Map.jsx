@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import React from "react";
 import {
     GoogleMap, 
@@ -100,9 +99,6 @@ export default function App() {
                             anchor: new window.google.maps.Point(15, 15),
                             scaledSize: new window.google.maps.Size(30, 30),
                         }}
-			onClick={() => {
-			    setSelected(marker);
-			}}
                     />
                 ))}
 	        {selected ? (
